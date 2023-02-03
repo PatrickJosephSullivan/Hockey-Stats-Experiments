@@ -67,7 +67,7 @@ def get_player_stats(player_dict):
         else:
             shots_per_game = None
         player_stats.update({f"{k}": {"Player ID": v, "Shots Per Game": shots_per_game}})
-        # df_splits.to_excel(f'{k}.xlsx', sheet_name="sheet_1")
+        df_splits.to_excel(f'{k}.xlsx', sheet_name="sheet_1")
         # print(f'{k}\n', df_splits.to_string())
         # return player_stats
 
