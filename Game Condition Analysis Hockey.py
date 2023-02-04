@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import datetime
 import re
 import webbrowser
 import selenium
@@ -14,15 +15,15 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 import pandas as pd
 
-"""Insert Player"""
-Player = "Adrian Kempe"
-""""""
 
 base_url = "https://statsapi.web.nhl.com/api/v1/teams"
 # Define the dictionary for player stats
 player_stats = {}
 # USER DEFINED SHOULD BE LIKE EX. "Kings"
 team = "Kings"
+h_or_r = "Home"
+opponent = "Anaheim Ducks"
+
 
 # Define a function to retrieve a team's id
 def get_team_id(team_name):
@@ -74,8 +75,18 @@ def get_player_dfs(player_dict):
         soup = BeautifulSoup(res.text, 'html.parser')
         table = soup.find("table", id="splits")
         df = pd.read_html(str(table))[0]
-
+        df.drop(df[df['Value'] == "Value"].index, inplace = True)
         print(df)
+        shots = int(df["S"].sum())
+        gp = int(df["GP"].sum())
+        print(shots)
+        print(gp)
+        opp = df[df['Value'] == opponent]
+        print(opp)
+        month = datetime.now().month
+        home_or_road = h_or_r
+        player_stats.update({f"{k}": {"Shots Per Game": s_per_game, }})
+        print(player_stats)
 
 
 
