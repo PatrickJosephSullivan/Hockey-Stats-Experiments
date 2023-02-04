@@ -72,22 +72,36 @@ def parse_name_parts(player_dict):
 
 def get_player_dfs(player_dict):
     for k, v in player_dict.items():
+        # Recieve player url from player dict
         url = v
+        # Make a request to hockey reference
         res = requests.get(url)
+        # Create a soup item
         soup = BeautifulSoup(res.text, 'html.parser')
+        # Find the table in the soup
         table = soup.find("table", id="splits")
+        # Create a datafram off of the table
         df = pd.read_html(str(table))[0]
-        df.drop(df[df['Value'] == "Value"].index, inplace = True)
-        print(df.to_string)
-        shots = int(df["S"].sum())
-        gp = int(df["GP"].sum())
-        print(shots)
-        print(gp)
+        # Transform unimportant data
+        df.drop(df[df['Value'] == "Value"].index, inplace=True)
+        df.iloc[:, 1:] = df.iloc[:, 1:].fillna(0.0)
+        # Convert the "S" column to integers
+        df["S"] = df["S"].astype(int)
+        # Search the "Value" column for "Total"
+        total_row = df.loc[df['Value'] == 'Total']
+        # find the integer in the "S" column
+        s = int(total_row['S'])
+        # find the integer in the "GP" column
+        gp = int(total_row['GP'])
+        # sum the "GP" column
+        s_per_game = s/gp
         opp = df[df['Value'] == opponent]
-        print(opp)
+        opp_s = int(total_row['S'])
+        opp_gp = int(total_row['GP'])
+        opp_s_per_gp = opp_s/opp_gp
         month = datetime.now().month
         home_or_road = h_or_r
-        player_stats.update({f"{k}": {"Shots Per Game": s_per_game, }})
+        player_stats.update({f"{k}": {"Shots Per Game": s_per_game, f"Shots Per Game vs. {opponent}": opp_s_per_gp}})
         print(player_stats)
 
 
@@ -96,3 +110,4 @@ team_id = get_team_id(team)
 player_dict = get_team_roster(team_id)
 player_urls = parse_name_parts(player_dict)
 get_player_dfs(player_urls)
+print(player_stats)
