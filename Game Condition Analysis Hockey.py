@@ -15,7 +15,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 import pandas as pd
 
-
+# Dataframe print options
+pd.options.display.max_columns = None
+pd.options.display.max_rows = None
 base_url = "https://statsapi.web.nhl.com/api/v1/teams"
 # Define the dictionary for player stats
 player_stats = {}
@@ -76,7 +78,7 @@ def get_player_dfs(player_dict):
         table = soup.find("table", id="splits")
         df = pd.read_html(str(table))[0]
         df.drop(df[df['Value'] == "Value"].index, inplace = True)
-        print(df)
+        print(df.to_string)
         shots = int(df["S"].sum())
         gp = int(df["GP"].sum())
         print(shots)
