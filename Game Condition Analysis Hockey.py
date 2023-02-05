@@ -1,6 +1,9 @@
+from wsgiref import headers
+
 import requests
 from bs4 import BeautifulSoup
 import datetime
+import cloudscraper
 import re
 import webbrowser
 import selenium
@@ -72,36 +75,57 @@ def parse_name_parts(player_dict):
 
 def get_player_dfs(player_dict):
     for k, v in player_dict.items():
+        sv_per_game = 0
         # Recieve player url from player dict
+        print(v)
         url = v
         # Make a request to hockey reference
-        res = requests.get(url)
+        scraper = cloudscraper.create_scraper(debug=True, delay=10)
+        res = scraper.get(url).text
+        print(res)
+        # res = requests.get(url)
         # Create a soup item
-        soup = BeautifulSoup(res.text, 'html.parser')
+        soup = BeautifulSoup(res, 'html.parser')
+        print(soup)
         # Find the table in the soup
         table = soup.find("table", id="splits")
-        # Create a datafram off of the table
+        print(table)
+        # Create a dataframe off of the table
         df = pd.read_html(str(table))[0]
         # Transform unimportant data
         df.drop(df[df['Value'] == "Value"].index, inplace=True)
         df.iloc[:, 1:] = df.iloc[:, 1:].fillna(0.0)
-        # Convert the "S" column to integers
-        df["S"] = df["S"].astype(int)
-        # Search the "Value" column for "Total"
         total_row = df.loc[df['Value'] == 'Total']
-        # find the integer in the "S" column
-        s = int(total_row['S'])
-        # find the integer in the "GP" column
-        gp = int(total_row['GP'])
-        # sum the "GP" column
-        s_per_game = s/gp
-        opp = df[df['Value'] == opponent]
-        opp_s = int(total_row['S'])
-        opp_gp = int(total_row['GP'])
-        opp_s_per_gp = opp_s/opp_gp
+        # Convert the "S" column to integers
+        if "S" in df:
+            df["S"] = df["S"].astype(int)
+            s = int(total_row['S'])
+            gp = int(total_row['GP'])
+            s_per_game = s / gp
+        elif "SV" in df:
+            df["SV"] = df["SV"].astype(int)
+            sv = int(total_row['SV'])
+            gp = int(total_row['GP'])
+            sv_per_game = sv / gp
+        opp_row = df.loc[df['Value'] == opponent]
+        if not opp_row.empty:
+            if "S" in df:
+                opp_s = int(opp_row['S'])
+                opp_gp = int(opp_row['GP'])
+                opp_s_per_gp = opp_s / opp_gp
+            elif "SV" in df:
+                opp_sv = int(total_row['SV'])
+                opp_gp = int(total_row['GP'])
+                opp_sv_per_gp = opp_sv / opp_gp
+        else:
+            opp_s_per_gp = "No Data"
         month = datetime.now().month
         home_or_road = h_or_r
-        player_stats.update({f"{k}": {"Shots Per Game": s_per_game, f"Shots Per Game vs. {opponent}": opp_s_per_gp}})
+        if s_per_game > 0:
+            player_stats.update({f"{k}": {"Shots Per Game": s_per_game, f"Shots Per Game vs. {opponent}": opp_s_per_gp}})
+        if sv_per_game > 0:
+            player_stats.update({f"{k}": {"Saves Per Game": sv_per_game, f"Saves Per Game vs.{opponent}": opp_sv_per_gp}})
+        s_per_game, sv_per_game, opp_sv_per_gp, opp_s_per_gp = 0,0,0,0
         print(player_stats)
 
 
