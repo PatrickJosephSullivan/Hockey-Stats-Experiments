@@ -77,19 +77,15 @@ def get_player_dfs(player_dict):
     for k, v in player_dict.items():
         sv_per_game = 0
         # Recieve player url from player dict
-        print(v)
         url = v
         # Make a request to hockey reference
         scraper = cloudscraper.create_scraper(debug=True, delay=10)
         res = scraper.get(url).text
-        print(res)
         # res = requests.get(url)
         # Create a soup item
         soup = BeautifulSoup(res, 'html.parser')
-        print(soup)
         # Find the table in the soup
         table = soup.find("table", id="splits")
-        print(table)
         # Create a dataframe off of the table
         df = pd.read_html(str(table))[0]
         # Transform unimportant data
@@ -114,8 +110,8 @@ def get_player_dfs(player_dict):
                 opp_gp = int(opp_row['GP'])
                 opp_s_per_gp = opp_s / opp_gp
             elif "SV" in df:
-                opp_sv = int(total_row['SV'])
-                opp_gp = int(total_row['GP'])
+                opp_sv = int(opp_row['SV'])
+                opp_gp = int(opp_row['GP'])
                 opp_sv_per_gp = opp_sv / opp_gp
         else:
             opp_s_per_gp = "No Data"
@@ -126,7 +122,7 @@ def get_player_dfs(player_dict):
         if sv_per_game > 0:
             player_stats.update({f"{k}": {"Saves Per Game": sv_per_game, f"Saves Per Game vs.{opponent}": opp_sv_per_gp}})
         s_per_game, sv_per_game, opp_sv_per_gp, opp_s_per_gp = 0,0,0,0
-        print(player_stats)
+
 
 
 
