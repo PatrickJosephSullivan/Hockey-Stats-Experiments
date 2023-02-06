@@ -26,11 +26,10 @@ base_url = "https://statsapi.web.nhl.com/api/v1/teams"
 player_stats = {}
 now = datetime.now()
 month = now.strftime("%B")
-print(type(month))
 # USER DEFINED SHOULD BE LIKE EX. "Kings"
-team = "Kings"
-h_or_r = "Home"
-opponent = "Anaheim Ducks"
+team = "Flyers"
+h_or_r = "Road"
+opponent = "New York Islanders"
 
 
 # Define a function to retrieve a team's id
@@ -71,21 +70,24 @@ def parse_name_parts(player_dict):
             first_two_letters_of_first_name = first_name[:2]
             player_url = f"https://www.hockey-reference.com/players/{first_letter_of_last_name}/{first_five_letters_of_last_name}{first_two_letters_of_first_name}01/splits/"
             player_dict[k] = player_url
+        elif len(name_parts) == 3:
+
         else:
-            return None, None, None, None
+            None
     return player_dict
 
 
 def get_player_dfs(player_dict):
+    print(player_dict)
     for k, v in player_dict.items():
         s_per_game = 0
         sv_per_game = 0
         # Receive player url from player dict
         url = v
         # Make a request to hockey reference
-        # scraper = cloudscraper.create_scraper(debug=True, delay=10)
-        # res = scraper.get(url).text
-        res = requests.get(url)
+        scraper = cloudscraper.create_scraper(debug=True, delay=10)
+        res = scraper.get(url).text
+        # res = requests.get(url)
         # Create a soup item
         soup = BeautifulSoup(res.text, 'html.parser')
         # Find the table in the soup
@@ -137,13 +139,16 @@ def get_player_dfs(player_dict):
         if sv_per_game > 0:
             player_stats.update({f"{k}": {"Saves Per Game": sv_per_game, f"Saves Per Game vs.{opponent}": opp_sv_per_gp, f"Shots Per Game in {month}": month_sv_per_gp}})
         s_per_game, sv_per_game, opp_sv_per_gp, opp_s_per_gp = 0,0,0,0
-        return player_stats
+        print(player_stats)
+        time.sleep(5)
 
 
 
 
 team_id = get_team_id(team)
 player_dict = get_team_roster(team_id)
+print(player_dict)
 player_urls = parse_name_parts(player_dict)
-get_player_dfs(player_urls)
+print(player_urls)
+get_player_dfs(player_dict)
 print(player_stats)
