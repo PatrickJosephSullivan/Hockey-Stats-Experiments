@@ -24,6 +24,9 @@ pd.options.display.max_rows = None
 base_url = "https://statsapi.web.nhl.com/api/v1/teams"
 # Define the dictionary for player stats
 player_stats = {}
+now = datetime.now()
+month = now.strftime("%B")
+print(type(month))
 # USER DEFINED SHOULD BE LIKE EX. "Kings"
 team = "Kings"
 h_or_r = "Home"
@@ -75,15 +78,16 @@ def parse_name_parts(player_dict):
 
 def get_player_dfs(player_dict):
     for k, v in player_dict.items():
+        s_per_game = 0
         sv_per_game = 0
-        # Recieve player url from player dict
+        # Receive player url from player dict
         url = v
         # Make a request to hockey reference
-        scraper = cloudscraper.create_scraper(debug=True, delay=10)
-        res = scraper.get(url).text
-        # res = requests.get(url)
+        # scraper = cloudscraper.create_scraper(debug=True, delay=10)
+        # res = scraper.get(url).text
+        res = requests.get(url)
         # Create a soup item
-        soup = BeautifulSoup(res, 'html.parser')
+        soup = BeautifulSoup(res.text, 'html.parser')
         # Find the table in the soup
         table = soup.find("table", id="splits")
         # Create a dataframe off of the table
@@ -92,6 +96,9 @@ def get_player_dfs(player_dict):
         df.drop(df[df['Value'] == "Value"].index, inplace=True)
         df.iloc[:, 1:] = df.iloc[:, 1:].fillna(0.0)
         total_row = df.loc[df['Value'] == 'Total']
+        opp_row = df.loc[df['Value'] == opponent]
+        month_row = df.loc[df['Value'] == month]
+        h_or_r_row = df.loc[df['Value'] == h_or_r]
         # Convert the "S" column to integers
         if "S" in df:
             df["S"] = df["S"].astype(int)
@@ -103,7 +110,7 @@ def get_player_dfs(player_dict):
             sv = int(total_row['SV'])
             gp = int(total_row['GP'])
             sv_per_game = sv / gp
-        opp_row = df.loc[df['Value'] == opponent]
+
         if not opp_row.empty:
             if "S" in df:
                 opp_s = int(opp_row['S'])
@@ -115,13 +122,22 @@ def get_player_dfs(player_dict):
                 opp_sv_per_gp = opp_sv / opp_gp
         else:
             opp_s_per_gp = "No Data"
-        month = datetime.now().month
-        home_or_road = h_or_r
+
+        if "S" in df:
+            s_per_month = int(month_row['S'])
+            gp_per_month = int(month_row['GP'])
+            month_s_per_gp = s_per_month/gp_per_month
+        elif "SV" in df:
+            sv_per_month = int(month_row['SV'])
+            gp_per_month = int(month_row['GP'])
+            month_sv_per_gp = sv_per_month / gp_per_month
+
         if s_per_game > 0:
-            player_stats.update({f"{k}": {"Shots Per Game": s_per_game, f"Shots Per Game vs. {opponent}": opp_s_per_gp}})
+            player_stats.update({f"{k}": {"Shots Per Game": s_per_game, f"Shots Per Game vs. {opponent}": opp_s_per_gp, f"Shots Per Game in {month}": month_s_per_gp}})
         if sv_per_game > 0:
-            player_stats.update({f"{k}": {"Saves Per Game": sv_per_game, f"Saves Per Game vs.{opponent}": opp_sv_per_gp}})
+            player_stats.update({f"{k}": {"Saves Per Game": sv_per_game, f"Saves Per Game vs.{opponent}": opp_sv_per_gp, f"Shots Per Game in {month}": month_sv_per_gp}})
         s_per_game, sv_per_game, opp_sv_per_gp, opp_s_per_gp = 0,0,0,0
+        return player_stats
 
 
 
