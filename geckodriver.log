@@ -9555,3 +9555,318 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 [Parent 19144, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:777
+1675729756016	geckodriver	INFO	Listening on 127.0.0.1:57975
+1675729759048	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57976" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofilecuQLGv"
+1675729759513	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675729759518	Marionette	INFO	Listening on port 57984
+WebDriver BiDi listening on ws://127.0.0.1:57976
+Read port: 57984
+1675729759746	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofilecuQLGv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57976/devtools/browser/a0292a57-591f-40d8-b7d1-35fa450179cf
+JavaScript warning: https://www.hockey-reference.com/players/A/AtkinCa01/splits/, line 203: unreachable code after return statement
+JavaScript warning: https://www.hockey-reference.com/players/A/AtkinCa01/splits/, line 203: unreachable code after return statement
+1675729762387	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript error: https://p.ad.gt/api/v1/p/474, line 1: TypeError: t.vendor is undefined
+1675729769902	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 944 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 6719 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1675729790574	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 7120 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1675729796060	Marionette	INFO	Stopped listening on port 57984
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Parent 7848, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:777
+1675729804758	geckodriver	INFO	Listening on 127.0.0.1:54376
+1675729807777	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54377" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofiletpWAD9"
+1675729808009	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675729808013	Marionette	INFO	Listening on port 54384
+WebDriver BiDi listening on ws://127.0.0.1:54377
+Read port: 54384
+1675729808214	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofiletpWAD9\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54377/devtools/browser/3b47a214-dc60-49ae-8100-a730fe2901a8
+JavaScript warning: https://www.hockey-reference.com/players/E/EllisRy01/splits/, line 203: unreachable code after return statement
+JavaScript warning: https://www.hockey-reference.com/players/E/EllisRy01/splits/, line 203: unreachable code after return statement
+1675729815497	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript error: https://p.ad.gt/api/v1/p/474, line 1: TypeError: t.vendor is undefined
+1675729821466	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 982 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 914 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 1213 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675729823651	Marionette	INFO	Stopped listening on port 54384
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1675729832229	geckodriver	INFO	Listening on 127.0.0.1:54316
+1675729835303	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54317" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofile8AmG6y"
+1675729835533	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675729835537	Marionette	INFO	Listening on port 54328
+WebDriver BiDi listening on ws://127.0.0.1:54317
+Read port: 54328
+1675729835735	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofile8AmG6y\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54317/devtools/browser/273a2054-11c3-490d-b75f-3b0a56e32f57
+JavaScript warning: https://www.hockey-reference.com/players/C/CoutuSe01/splits/, line 203: unreachable code after return statement
+JavaScript warning: https://www.hockey-reference.com/players/C/CoutuSe01/splits/, line 203: unreachable code after return statement
+1675729841988	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript error: https://p.ad.gt/api/v1/p/474, line 1: TypeError: t.vendor is undefined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 3117 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675729848913	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 2483 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: uncaught exception: 7
+1675729849667	Marionette	INFO	Stopped listening on port 54328
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 2193 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Parent 16796, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:777
+[Parent 16796, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:777
+1675729858183	geckodriver	INFO	Listening on 127.0.0.1:57880
+1675729861217	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57881" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofilesADTkJ"
+1675729861444	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675729861447	Marionette	INFO	Listening on port 57888
+WebDriver BiDi listening on ws://127.0.0.1:57881
+Read port: 57888
+1675729861647	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofilesADTkJ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57881/devtools/browser/b1e11e67-402d-4f9f-9479-a3683c84465b
+JavaScript warning: https://www.hockey-reference.com/players/L/LaczyTa01/splits/, line 203: unreachable code after return statement
+JavaScript warning: https://www.hockey-reference.com/players/L/LaczyTa01/splits/, line 203: unreachable code after return statement
+1675729867826	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript error: https://p.ad.gt/api/v1/p/474, line 1: TypeError: t.vendor is undefined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 728 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 438 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675729874836	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: uncaught exception: 7
+1675729876108	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 4336 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/wpromotepeacockdcmdisplay515722200356/moatad.js#moatClientLevel1=28795368&moatClientLevel2=6031710&moatClientLevel3=349269230&moatClientLevel4=180663261&zMoatG=ct=US&st=CA&city=13318&dma=195&zp=91303&bw=4&zMoatADV=9902108&zMoatENV=j, line 239: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 7589 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675729877767	Marionette	INFO	Stopped listening on port 57888
+JavaScript warning: https://cdn.js7k.com/ix/talon-1.0.40.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Parent 3044, IPC I/O Parent] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:583
+[Parent 3044, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:777
+1675730103947	geckodriver	INFO	Listening on 127.0.0.1:64399
+1675730106987	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64400" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofileftp0M0"
+1675730107213	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675730107216	Marionette	INFO	Listening on port 64407
+WebDriver BiDi listening on ws://127.0.0.1:64400
+Read port: 64407
+1675730107415	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofileftp0M0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:64400/devtools/browser/36fb7e4c-f0e8-4dd7-ad2d-8d26eea74635
+JavaScript warning: https://www.hockey-reference.com/players/A/AtkinCa01/splits/, line 203: unreachable code after return statement
+JavaScript warning: https://www.hockey-reference.com/players/A/AtkinCa01/splits/, line 203: unreachable code after return statement
+1675730109480	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1675730110234	Marionette	INFO	Stopped listening on port 64407
+Dynamically enable window occlusion 1
+JavaScript error: resource://gre/actors/ContentMetaChild.jsm, line 183: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+JavaScript error: resource://services-settings/Utils.jsm, line 230: TypeError: NetworkError: Network request failed
+1675730118193	geckodriver	INFO	Listening on 127.0.0.1:64532
+1675730121238	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64533" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofilebqasDZ"
+1675730121463	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675730121466	Marionette	INFO	Listening on port 64540
+WebDriver BiDi listening on ws://127.0.0.1:64533
+Read port: 64540
+1675730121661	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofilebqasDZ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:64533/devtools/browser/4f050ff8-c026-4c0a-9c55-209ff3b08e70
+JavaScript warning: https://www.hockey-reference.com/players/E/EllisRy01/splits/, line 203: unreachable code after return statement
+JavaScript warning: https://www.hockey-reference.com/players/E/EllisRy01/splits/, line 203: unreachable code after return statement
+1675730127644	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript error: https://p.ad.gt/api/v1/p/474, line 1: TypeError: t.vendor is undefined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 6897 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675730133930	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1675730138889	Marionette	INFO	Stopped listening on port 64540
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 797 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1675730147348	geckodriver	INFO	Listening on 127.0.0.1:65065
+1675730150381	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65066" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofilemMc96W"
+1675730150614	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675730150617	Marionette	INFO	Listening on port 65073
+WebDriver BiDi listening on ws://127.0.0.1:65066
+Read port: 65073
+1675730150816	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofilemMc96W\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:65066/devtools/browser/50e19ac0-9c56-454d-90c9-c703fa4c4878
+JavaScript warning: https://www.hockey-reference.com/players/C/CoutuSe01/splits/, line 203: unreachable code after return statement
+JavaScript warning: https://www.hockey-reference.com/players/C/CoutuSe01/splits/, line 203: unreachable code after return statement
+1675730156920	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript error: https://p.stage.ad.gt/api/v1/p/474, line 2733: TypeError: tcData.vendor is undefined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 4548 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675730163404	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 7416 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://z.moatads.com/yahoodisplay873773666324/moatad.js#moatClientLevel1=Yahoo!&moatClientLevel2=503272&moatClientLevel3=2456357&moatClientLevel4=5746764&moatClientSlicer1=3&moatClientSlicer2=0&zMoatAuctionID=3081517396277187632:1675730159271&zMoatAdReqDomain=hockey-reference.com, line 238: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 4862 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675730187798	Marionette	INFO	Stopped listening on port 65073
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 3392 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://cdn.js7k.com/rq/iv/inside-20.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://cdn.js7k.com/ix/talon-1.0.40.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1675730196367	geckodriver	INFO	Listening on 127.0.0.1:50150
+1675730199407	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50151" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofileLkWmse"
+1675730199634	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675730199637	Marionette	INFO	Listening on port 50158
+WebDriver BiDi listening on ws://127.0.0.1:50151
+Read port: 50158
+1675730199836	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofileLkWmse\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50151/devtools/browser/36699528-de2e-41ee-a422-02a4beacd4c1
+JavaScript warning: https://www.hockey-reference.com/players/L/LaczyTa01/splits/, line 203: unreachable code after return statement
+JavaScript warning: https://www.hockey-reference.com/players/L/LaczyTa01/splits/, line 203: unreachable code after return statement
+1675730206097	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript error: https://p.ad.gt/api/v1/p/474, line 1: TypeError: t.vendor is undefined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 4094 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 7470 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675730213149	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+1675730213380	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1675730213402	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 84 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675730221329	Marionette	INFO	Stopped listening on port 50158
+JavaScript warning: https://cdn.js7k.com/ix/talon-1.0.40.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1675730229931	geckodriver	INFO	Listening on 127.0.0.1:63859
+1675730232953	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63860" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofileYg3DrV"
+1675730233182	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675730233186	Marionette	INFO	Listening on port 63867
+WebDriver BiDi listening on ws://127.0.0.1:63860
+Read port: 63867
+1675730233376	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofileYg3DrV\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:63860/devtools/browser/c39026d2-3480-4fcf-8483-35a68e8b64b6
+JavaScript warning: https://www.hockey-reference.com/players/B/BraunJu01/splits/, line 203: unreachable code after return statement
+JavaScript warning: https://www.hockey-reference.com/players/B/BraunJu01/splits/, line 203: unreachable code after return statement
+1675730239547	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript error: https://p.ad.gt/api/v1/p/474, line 1: TypeError: t.vendor is undefined
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 1751 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 2941 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675730245791	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1675730245877	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1675730245893	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1675730245897	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1675730245899	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 3381 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 467 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675730253293	Marionette	INFO	Stopped listening on port 63867
+JavaScript warning: https://cdn.js7k.com/ix/talon-1.0.40.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Parent 17344, IPC I/O Parent] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:583
+1675730262504	geckodriver	INFO	Listening on 127.0.0.1:64292
+1675730265547	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64293" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofilezxj27l"
+1675730265774	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675730265777	Marionette	INFO	Listening on port 64300
+WebDriver BiDi listening on ws://127.0.0.1:64293
+Read port: 64300
+1675730265983	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofilezxj27l\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:64293/devtools/browser/8d0bf2ea-dd5e-40d2-be8b-0ba77d540903
+JavaScript warning: https://www.hockey-reference.com/players/v/vanrija01.html, line 203: unreachable code after return statement
+JavaScript warning: https://www.hockey-reference.com/players/v/vanrija01.html, line 203: unreachable code after return statement
+1675730272336	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript error: https://p.stage.ad.gt/api/v1/p/474, line 2733: TypeError: tcData.vendor is undefined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 5363 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 4291 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675730279475	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 2401 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 1183 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1675730285370	Marionette	INFO	Stopped listening on port 64300
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Parent 3696, IPC I/O Parent] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:583
+[Parent 3696, IPC I/O Parent] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:583
+[Parent 3696, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:777
+1675730575400	geckodriver	INFO	Listening on 127.0.0.1:64812
+1675730578444	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64813" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofileFeQ2hS"
+1675730578673	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675730578676	Marionette	INFO	Listening on port 64820
+WebDriver BiDi listening on ws://127.0.0.1:64813
+Read port: 64820
+1675730578868	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofileFeQ2hS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:64813/devtools/browser/e8a26ea9-3cf0-4d7b-8a3e-3390330e898b
+JavaScript warning: https://www.hockey-reference.com/players/A/AtkinCa01/splits/, line 203: unreachable code after return statement
+JavaScript warning: https://www.hockey-reference.com/players/A/AtkinCa01/splits/, line 203: unreachable code after return statement
+1675730580938	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1675730581674	Marionette	INFO	Stopped listening on port 64820
+Dynamically enable window occlusion 1
+JavaScript error: resource://services-settings/Utils.jsm, line 230: TypeError: NetworkError: Network request failed
+1675730595326	geckodriver	INFO	Listening on 127.0.0.1:64957
+1675730598365	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64958" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofileIA0xpr"
+1675730598596	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675730598600	Marionette	INFO	Listening on port 64965
+WebDriver BiDi listening on ws://127.0.0.1:64958
+Read port: 64965
+1675730598795	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofileIA0xpr\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:64958/devtools/browser/f872959c-4b6a-4ffc-8676-23539514f72c
+JavaScript warning: https://www.hockey-reference.com/players/A/AtkinCa01/splits/, line 203: unreachable code after return statement
+JavaScript warning: https://www.hockey-reference.com/players/A/AtkinCa01/splits/, line 203: unreachable code after return statement
+1675730601020	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1675730601764	Marionette	INFO	Stopped listening on port 64965
+Dynamically enable window occlusion 1
+JavaScript error: resource://services-settings/Utils.jsm, line 230: TypeError: NetworkError: Network request failed
+1675730609713	geckodriver	INFO	Listening on 127.0.0.1:65105
+1675730612757	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65106" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofileJ0HIVc"
+1675730612983	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1675730612986	Marionette	INFO	Listening on port 65113
+WebDriver BiDi listening on ws://127.0.0.1:65106
+Read port: 65113
+1675730613178	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Patrick\\AppData\\Local\\Temp\\rust_mozprofileJ0HIVc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:65106/devtools/browser/2e6dbc13-a6f3-412c-8cf8-e1399cac05ef
+JavaScript warning: https://www.hockey-reference.com/players/E/EllisRy01/splits/, line 203: unreachable code after return statement
+JavaScript warning: https://www.hockey-reference.com/players/E/EllisRy01/splits/, line 203: unreachable code after return statement
+1675730619084	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript error: https://p.ad.gt/api/v1/p/474, line 1: TypeError: t.vendor is undefined
+1675730625065	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/enP75FOAOR6Dv0_xbsOpJb6_RhPRjbOZFZcWOHt7fp4.js line 2 > eval line 7432 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.

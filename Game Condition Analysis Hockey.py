@@ -30,6 +30,7 @@ month = now.strftime("%B")
 team = "Flyers"
 h_or_r = "Road"
 opponent = "New York Islanders"
+manual = True
 
 
 # Define a function to retrieve a team's id
@@ -70,8 +71,9 @@ def parse_name_parts(player_dict):
             first_two_letters_of_first_name = first_name[:2]
             player_url = f"https://www.hockey-reference.com/players/{first_letter_of_last_name}/{first_five_letters_of_last_name}{first_two_letters_of_first_name}01/splits/"
             player_dict[k] = player_url
-        elif len(name_parts) == 3:
-
+        elif k == "James van Riemsdyk":
+            player_url = "https://www.hockey-reference.com/players/v/vanrija01.html"
+            player_dict[k] = player_url
         else:
             None
     return player_dict
@@ -84,12 +86,21 @@ def get_player_dfs(player_dict):
         sv_per_game = 0
         # Receive player url from player dict
         url = v
-        # Make a request to hockey reference
-        scraper = cloudscraper.create_scraper(debug=True, delay=10)
-        res = scraper.get(url).text
-        # res = requests.get(url)
+        # Make a request to hockey reference either by selenium or requests depending on 429 status
+        if manual is True:
+            driver = webdriver.Firefox()
+            driver.get(url)
+            driver.maximize_window()
+            res = driver.page_source
+            print(res)
+            driver.quit()
+        else:
+            res = requests.get(url)
+        # scraper = cloudscraper.create_scraper(debug=True, delay=10)
+        # res = scraper.get(url).text
+
         # Create a soup item
-        soup = BeautifulSoup(res.text, 'html.parser')
+        soup = BeautifulSoup(res, 'html.parser')
         # Find the table in the soup
         table = soup.find("table", id="splits")
         # Create a dataframe off of the table
@@ -125,14 +136,17 @@ def get_player_dfs(player_dict):
         else:
             opp_s_per_gp = "No Data"
 
-        if "S" in df:
-            s_per_month = int(month_row['S'])
-            gp_per_month = int(month_row['GP'])
-            month_s_per_gp = s_per_month/gp_per_month
-        elif "SV" in df:
-            sv_per_month = int(month_row['SV'])
-            gp_per_month = int(month_row['GP'])
-            month_sv_per_gp = sv_per_month / gp_per_month
+        if not month_row.empty:
+            if "S" in df:
+                s_per_month = int(month_row['S'])
+                gp_per_month = int(month_row['GP'])
+                month_s_per_gp = s_per_month/gp_per_month
+            elif "SV" in df:
+                sv_per_month = int(month_row['SV'])
+                gp_per_month = int(month_row['GP'])
+                month_sv_per_gp = sv_per_month / gp_per_month
+        else:
+            month_s_per_gp = "No Data"
 
         if s_per_game > 0:
             player_stats.update({f"{k}": {"Shots Per Game": s_per_game, f"Shots Per Game vs. {opponent}": opp_s_per_gp, f"Shots Per Game in {month}": month_s_per_gp}})

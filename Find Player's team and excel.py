@@ -153,9 +153,9 @@ def get_excel(player_url):
     url = f"{player_url}/splits/"
     print(url)
     
-    # driver = webdriver.Firefox()
-    # driver.get(url)
-    # driver.maximize_window()
+    driver = webdriver.Firefox()
+    driver.get(url)
+    driver.maximize_window()
     # time.sleep(3)
     # # Scroll down so mouseover event is in viewport (uses x,y co-ords [could probably be optimized better])
     # ActionChains(driver).scroll_by_amount(0,1000).perform()
