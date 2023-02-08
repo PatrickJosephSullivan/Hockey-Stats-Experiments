@@ -1,5 +1,5 @@
 from wsgiref import headers
-
+import json
 import requests
 from bs4 import BeautifulSoup
 import datetime
@@ -62,7 +62,20 @@ def get_team_roster(team_id):
 
 def parse_name_parts(player_dict):
     for k in player_dict:
+        new_name = k.replace(".", "")
         name_parts = k.split()
+        if new_name != k:
+            name_parts = new_name.split()
+        if len(name_parts) == 3:
+            name_parts = name_parts[0] + " " + name_parts[1] + name_parts[2]
+            name_parts = name_parts.split()
+            first_name, last_name = name_parts[0], name_parts[1]
+            first_letter_of_last_name = last_name[0]
+            first_four_letters_of_last_name = last_name[:4]
+            first_five_letters_of_last_name = last_name[:5]
+            first_two_letters_of_first_name = first_name[:2]
+            player_url = f"https://www.hockey-reference.com/players/{first_letter_of_last_name}/{first_five_letters_of_last_name}{first_two_letters_of_first_name}01/splits/"
+            player_dict[k] = player_url
         if len(name_parts) == 2:
             first_name, last_name = name_parts[0], name_parts[-1]
             first_letter_of_last_name = last_name[0]
@@ -153,8 +166,8 @@ def get_player_dfs(player_dict):
         if sv_per_game > 0:
             player_stats.update({f"{k}": {"Saves Per Game": sv_per_game, f"Saves Per Game vs.{opponent}": opp_sv_per_gp, f"Shots Per Game in {month}": month_sv_per_gp}})
         s_per_game, sv_per_game, opp_sv_per_gp, opp_s_per_gp = 0,0,0,0
-        for player, stats in player_stats.items():
-            print(player, stats)
+        # for player, stats in player_stats.items():
+        #     print(player, stats)
         time.sleep(5)
 
 
@@ -166,5 +179,5 @@ print(player_dict)
 player_urls = parse_name_parts(player_dict)
 print(player_urls)
 get_player_dfs(player_dict)
-# for k, v in player_stats.items():
-#     print(k,v)
+for k, v in player_stats.items():
+    print(k,v)
