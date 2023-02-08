@@ -152,54 +152,53 @@ def get_excel(player_url):
         player_url = player_url.replace(".html", "")
     url = f"{player_url}/splits/"
     print(url)
-    
     driver = webdriver.Firefox()
     driver.get(url)
     driver.maximize_window()
-    # time.sleep(3)
-    # # Scroll down so mouseover event is in viewport (uses x,y co-ords [could probably be optimized better])
-    # ActionChains(driver).scroll_by_amount(0,1000).perform()
-    # time.sleep(3)
-    # # Find mouseover element so we can download the excel sheet
-    # if "football" in sport:
-    #     share_export_button = driver.find_element(By.CSS_SELECTOR,
-    #                                               ".sidescroll_note > ul:nth-child(1) > li:nth-child(2)")
-    # elif "hockey" in sport:
-    #     share_export_button = driver.find_element(By.CSS_SELECTOR, "#splits_sh > div:nth-child(3) > ul:nth-child(1) > li:nth-child(2)")
-    # time.sleep(3)
-    # # Use action chain module to activate mouseover css event
-    # ActionChains(driver).move_to_element(share_export_button).perform()
-    # time.sleep(3)
-    # # Find excel download button by CSS Selector
-    # if "football" in sport:
-    #     excel_button = driver.find_element(By.CSS_SELECTOR, ".sidescroll_note > ul:nth-child(1) > li:nth-child(2) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(1)")
-    # elif "hockey" in sport:
-    #     excel_button = driver.find_element(By.CSS_SELECTOR, "#splits_sh > div:nth-child(3) > ul:nth-child(1) > li:nth-child(2) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(1)")
-    # time.sleep(3)
-    # # click excel button
-    # excel_button.click()
-    # time.sleep(3)
-    # # Set downloads folder
-    # download_folder = "C:/Users/Patrick/Downloads"
-    # # Get a list of all files in the download folder
-    # files = os.listdir(download_folder)
-    # # Sort the files based on their modification time
-    # files.sort(key=lambda x: os.path.getmtime(os.path.join(download_folder, x)))
-    # # Get the last modified file
-    # last_modified_file = files[-1]
-    # # Get the file path
-    # file_path = os.path.join(download_folder, last_modified_file)
-    # # Get the file extension
-    # file_extension = os.path.splitext(file_path)[1]
-    # # Get the date when the file was last modified
-    # date_time = datetime.fromtimestamp(os.path.getmtime(file_path))
-    # date_str = date_time.strftime("%Y-%m-%d")
-    # # Create new file name
-    # new_file_name = name_string + "_" + date_str + file_extension
-    # # Create new file path
-    # new_file_path = os.path.join(download_folder, new_file_name)
-    # # Rename the file
-    # os.rename(file_path, new_file_path)
+    time.sleep(3)
+    # Scroll down so mouseover event is in viewport (uses x,y co-ords [could probably be optimized better])
+    ActionChains(driver).scroll_by_amount(0,1000).perform()
+    time.sleep(3)
+    # Find mouseover element so we can download the excel sheet
+    if "football" in sport:
+        share_export_button = driver.find_element(By.CSS_SELECTOR,
+                                                  ".sidescroll_note > ul:nth-child(1) > li:nth-child(2)")
+    elif "hockey" in sport:
+        share_export_button = driver.find_element(By.CSS_SELECTOR, "#splits_sh > div:nth-child(3) > ul:nth-child(1) > li:nth-child(2)")
+    time.sleep(3)
+    # Use action chain module to activate mouseover css event
+    ActionChains(driver).move_to_element(share_export_button).perform()
+    time.sleep(3)
+    # Find excel download button by CSS Selector
+    if "football" in sport:
+        excel_button = driver.find_element(By.CSS_SELECTOR, ".sidescroll_note > ul:nth-child(1) > li:nth-child(2) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(1)")
+    elif "hockey" in sport:
+        excel_button = driver.find_element(By.CSS_SELECTOR, "#splits_sh > div:nth-child(3) > ul:nth-child(1) > li:nth-child(2) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(1)")
+    time.sleep(3)
+    # click excel button
+    excel_button.click()
+    time.sleep(3)
+    # Set downloads folder
+    download_folder = "C:/Users/Patrick/Downloads"
+    # Get a list of all files in the download folder
+    files = os.listdir(download_folder)
+    # Sort the files based on their modification time
+    files.sort(key=lambda x: os.path.getmtime(os.path.join(download_folder, x)))
+    # Get the last modified file
+    last_modified_file = files[-1]
+    # Get the file path
+    file_path = os.path.join(download_folder, last_modified_file)
+    # Get the file extension
+    file_extension = os.path.splitext(file_path)[1]
+    # Get the date when the file was last modified
+    date_time = datetime.fromtimestamp(os.path.getmtime(file_path))
+    date_str = date_time.strftime("%Y-%m-%d")
+    # Create new file name
+    new_file_name = name_string + "_" + date_str + file_extension
+    # Create new file path
+    new_file_path = os.path.join(download_folder, new_file_name)
+    # Rename the file
+    os.rename(file_path, new_file_path)
 
 
 def get_game_conditions(schedule):
@@ -248,7 +247,7 @@ def get_game_conditions(schedule):
 
 """INSERT SPORT AND PLAYER"""
 sport = "Hockey"
-name_string = "Adrian Kempe"
+name_string = "Anthony Beauvillier"
 if "Hockey" in sport:
     name_string = name_string.lower()
 """INSERT SPORT AND PLAYER"""

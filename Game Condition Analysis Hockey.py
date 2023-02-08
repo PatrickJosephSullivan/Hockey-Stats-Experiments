@@ -27,10 +27,10 @@ player_stats = {}
 now = datetime.now()
 month = now.strftime("%B")
 # USER DEFINED SHOULD BE LIKE EX. "Kings"
-team = "Flyers"
+team = "Canucks"
 h_or_r = "Road"
-opponent = "New York Islanders"
-manual = True
+opponent = "New York Rangers"
+manual = False
 
 
 # Define a function to retrieve a team's id
@@ -94,13 +94,13 @@ def get_player_dfs(player_dict):
             res = driver.page_source
             print(res)
             driver.quit()
+            soup = BeautifulSoup(res, 'html.parser')
         else:
             res = requests.get(url)
+            soup = BeautifulSoup(res.text, 'html.parser')
         # scraper = cloudscraper.create_scraper(debug=True, delay=10)
         # res = scraper.get(url).text
 
-        # Create a soup item
-        soup = BeautifulSoup(res, 'html.parser')
         # Find the table in the soup
         table = soup.find("table", id="splits")
         # Create a dataframe off of the table
@@ -153,7 +153,8 @@ def get_player_dfs(player_dict):
         if sv_per_game > 0:
             player_stats.update({f"{k}": {"Saves Per Game": sv_per_game, f"Saves Per Game vs.{opponent}": opp_sv_per_gp, f"Shots Per Game in {month}": month_sv_per_gp}})
         s_per_game, sv_per_game, opp_sv_per_gp, opp_s_per_gp = 0,0,0,0
-        print(player_stats)
+        for player, stats in player_stats.items():
+            print(player, stats)
         time.sleep(5)
 
 
@@ -165,4 +166,5 @@ print(player_dict)
 player_urls = parse_name_parts(player_dict)
 print(player_urls)
 get_player_dfs(player_dict)
-print(player_stats)
+# for k, v in player_stats.items():
+#     print(k,v)
