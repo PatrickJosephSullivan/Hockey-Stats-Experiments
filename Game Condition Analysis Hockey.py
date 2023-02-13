@@ -22,15 +22,37 @@ import pandas as pd
 pd.options.display.max_columns = None
 pd.options.display.max_rows = None
 base_url = "https://statsapi.web.nhl.com/api/v1/teams"
-# Define the dictionary for player stats
+# Define time variables
 player_stats = {}
 now = datetime.now()
+today = datetime.now().strftime("%m_%d_%Y")
 month = now.strftime("%B")
 # USER DEFINED SHOULD BE LIKE EX. "Kings"
-team = "Canucks"
-h_or_r = "Road"
-opponent = "New York Rangers"
+schedule_date = "?date=2023-02-13"
+schedule_url = f"https://statsapi.web.nhl.com/api/v1/schedule{schedule_date}"
+team = "Senators"
+h_or_r = "Home"
+opponent = "Calgary Flames"
 manual = False
+
+def get_teams(schedule_url):
+    game_number = 0
+    teams_dict = {}
+    url = schedule_url
+    response = requests.get(url)
+    text = response.json()
+    all_teams = text["dates"][0]["games"]
+    for i in all_teams:
+        game_number += 1
+        home_team = i["teams"]["home"]["team"]["name"]
+        home_team_record = i["teams"]["home"]["leagueRecord"]
+        del home_team_record["type"]
+        road_team = i["teams"]["away"]["team"]["name"]
+        road_team_record = i["teams"]["away"]["leagueRecord"]
+        del road_team_record["type"]
+        teams_dict.update({game_number: {"home": home_team, "home team record": home_team_record, "road": road_team, "road team record": road_team_record}})
+    for k, v in teams_dict.items():
+        print(k, v)
 
 
 # Define a function to retrieve a team's id
@@ -63,10 +85,15 @@ def get_team_roster(team_id):
 def parse_name_parts(player_dict):
     for k in player_dict:
         new_name = k.replace(".", "")
+        new_name = new_name.replace("'", "")
         name_parts = k.split()
         if new_name != k:
             name_parts = new_name.split()
-        if len(name_parts) == 3:
+        """Player exceptions for if two player's have same names or similar names"""
+        if k == "Martin Jones":
+            player_url = "https://www.hockey-reference.com/players/j/jonesma02/splits/"
+            player_dict[k] = player_url
+        elif len(name_parts) == 3:
             name_parts = name_parts[0] + " " + name_parts[1] + name_parts[2]
             name_parts = name_parts.split()
             first_name, last_name = name_parts[0], name_parts[1]
@@ -76,7 +103,7 @@ def parse_name_parts(player_dict):
             first_two_letters_of_first_name = first_name[:2]
             player_url = f"https://www.hockey-reference.com/players/{first_letter_of_last_name}/{first_five_letters_of_last_name}{first_two_letters_of_first_name}01/splits/"
             player_dict[k] = player_url
-        if len(name_parts) == 2:
+        elif len(name_parts) == 2:
             first_name, last_name = name_parts[0], name_parts[-1]
             first_letter_of_last_name = last_name[0]
             first_four_letters_of_last_name = last_name[:4]
@@ -97,6 +124,7 @@ def get_player_dfs(player_dict):
     for k, v in player_dict.items():
         s_per_game = 0
         sv_per_game = 0
+        opp_sv_per_gp = 0
         # Receive player url from player dict
         url = v
         # Make a request to hockey reference either by selenium or requests depending on 429 status
@@ -116,6 +144,9 @@ def get_player_dfs(player_dict):
 
         # Find the table in the soup
         table = soup.find("table", id="splits")
+        if table is None:
+            print(f"{k} Table not found")
+            continue
         # Create a dataframe off of the table
         df = pd.read_html(str(table))[0]
         # Transform unimportant data
@@ -172,12 +203,13 @@ def get_player_dfs(player_dict):
 
 
 
-
+get_teams(schedule_url)
 team_id = get_team_id(team)
 player_dict = get_team_roster(team_id)
 print(player_dict)
 player_urls = parse_name_parts(player_dict)
 print(player_urls)
 get_player_dfs(player_dict)
-for k, v in player_stats.items():
-    print(k,v)
+with open(f"player_stats_{team}_vs_{opponent}_{today}.txt", "w") as f:
+    for k, v in player_stats.items():
+        f.write(f"{k}: {v}\n")
