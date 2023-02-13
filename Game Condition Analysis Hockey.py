@@ -24,6 +24,7 @@ pd.options.display.max_rows = None
 base_url = "https://statsapi.web.nhl.com/api/v1/teams"
 # Define time variables
 player_stats = {}
+teams_dict = {}
 now = datetime.now()
 today = datetime.now().strftime("%m_%d_%Y")
 month = now.strftime("%B")
@@ -37,7 +38,6 @@ manual = False
 
 def get_teams(schedule_url):
     game_number = 0
-    teams_dict = {}
     url = schedule_url
     response = requests.get(url)
     text = response.json()
@@ -204,6 +204,15 @@ def get_player_dfs(player_dict):
 
 
 get_teams(schedule_url)
+# for i in teams_dict:
+#     for k, v in teams_dict[i].items():
+#         if k == "home":
+#             team = v
+#             print(team)
+#         if k == "road":
+#             opponent = v
+#             print(opponent)
+
 team_id = get_team_id(team)
 player_dict = get_team_roster(team_id)
 print(player_dict)
