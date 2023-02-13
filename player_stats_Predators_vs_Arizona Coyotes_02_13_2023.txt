@@ -1,0 +1,23 @@
+Mark Borowiecki: {'Shots Per Game': 0.8013100436681223, 'Shots Per Game vs. Arizona Coyotes': 0.6666666666666666, 'Shots Per Game in February': 0.8289473684210527}
+Ryan McDonagh: {'Shots Per Game': 1.5920096852300243, 'Shots Per Game vs. Arizona Coyotes': 1.7777777777777777, 'Shots Per Game in February': 1.5508474576271187}
+Roman Josi: {'Shots Per Game': 2.914814814814815, 'Shots Per Game vs. Arizona Coyotes': 3.6785714285714284, 'Shots Per Game in February': 2.7205882352941178}
+Matt Duchene: {'Shots Per Game': 2.452830188679245, 'Shots Per Game vs. Arizona Coyotes': 1.8857142857142857, 'Shots Per Game in February': 2.2152777777777777}
+Mattias Ekholm: {'Shots Per Game': 1.6235955056179776, 'Shots Per Game vs. Arizona Coyotes': 1.565217391304348, 'Shots Per Game in February': 1.8673469387755102}
+Ryan Johansen: {'Shots Per Game': 1.8996415770609318, 'Shots Per Game vs. Arizona Coyotes': 2.076923076923077, 'Shots Per Game in February': 1.7168141592920354}
+Mikael Granlund: {'Shots Per Game': 1.8599167822468794, 'Shots Per Game vs. Arizona Coyotes': 1.7826086956521738, 'Shots Per Game in February': 2.3135593220338984}
+Nino Niederreiter: {'Shots Per Game': 1.973145780051151, 'Shots Per Game vs. Arizona Coyotes': 1.7727272727272727, 'Shots Per Game in February': 2.1707317073170733}
+Kevin Gravel: {'Shots Per Game': 1.0948275862068966, 'Shots Per Game vs. Arizona Coyotes': 1.8333333333333333, 'Shots Per Game in February': 1.1304347826086956}
+Mark Jankowski: {'Shots Per Game': 1.1144781144781144, 'Shots Per Game vs. Arizona Coyotes': 1.4615384615384615, 'Shots Per Game in February': 0.9259259259259259}
+Filip Forsberg: {'Shots Per Game': 3.0162337662337664, 'Shots Per Game vs. Arizona Coyotes': 3.0, 'Shots Per Game in February': 3.203883495145631}
+Colton Sissons: {'Shots Per Game': 1.0950495049504951, 'Shots Per Game vs. Arizona Coyotes': 1.5, 'Shots Per Game in February': 1.0555555555555556}
+Juuse Saros: {'Saves Per Game': 27.95402298850575, 'Saves Per Game vs.Arizona Coyotes': 26.6, 'Shots Per Game in February': 27.625}
+Jeremy Lauzon: {'Shots Per Game': 1.1297297297297297, 'Shots Per Game vs. Arizona Coyotes': 1.0, 'Shots Per Game in February': 1.2121212121212122}
+Yakov Trenin: {'Shots Per Game': 1.6073298429319371, 'Shots Per Game vs. Arizona Coyotes': 0.6666666666666666, 'Shots Per Game in February': 1.4285714285714286}
+Alexandre Carrier: {'Shots Per Game': 1.2553191489361701, 'Shots Per Game vs. Arizona Coyotes': 1.3333333333333333, 'Shots Per Game in February': 0.5714285714285714}
+Dante Fabbro: {'Shots Per Game': 1.3936651583710407, 'Shots Per Game vs. Arizona Coyotes': 2.4, 'Shots Per Game in February': 1.7297297297297298}
+Tanner Jeannot: {'Shots Per Game': 1.5616438356164384, 'Shots Per Game vs. Arizona Coyotes': 1.25, 'Shots Per Game in February': 1.8}
+Cody Glass: {'Shots Per Game': 1.3596491228070176, 'Shots Per Game vs. Arizona Coyotes': 1.2, 'Shots Per Game in February': 1.1428571428571428}
+Kevin Lankinen: {'Saves Per Game': 28.7875, 'Saves Per Game vs.Arizona Coyotes': 32.0, 'Shots Per Game in February': 33.0}
+Philip Tomasino: {'Shots Per Game': 1.4605263157894737, 'Shots Per Game vs. Arizona Coyotes': 1.6666666666666667, 'Shots Per Game in February': 1.375}
+Juuso Parssinen: {'Shots Per Game': 1.1944444444444444, 'Shots Per Game vs. Arizona Coyotes': 2.0, 'Shots Per Game in February': 1.5}
+Cole Smith: {'Shots Per Game': 1.0, 'Shots Per Game vs. Arizona Coyotes': 'No Data', 'Shots Per Game in February': 'No Data'}

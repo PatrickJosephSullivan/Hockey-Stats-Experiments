@@ -1,6 +1,6 @@
 import os
 
-for i in range(700,731):
+for i in range(914,931):
   folder_name = str(i)
-  os.makedirs(folder_name + '/before')
-  os.makedirs(folder_name + '/after')
+  os.makedirs(folder_name + '/Before')
+  os.makedirs(folder_name + '/After')

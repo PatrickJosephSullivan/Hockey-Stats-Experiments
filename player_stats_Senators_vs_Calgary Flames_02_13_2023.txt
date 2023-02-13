@@ -1,0 +1,23 @@
+Cam Talbot: {'Saves Per Game': 26.82075471698113, 'Saves Per Game vs.Calgary Flames': 25.266666666666666, 'Shots Per Game in February': 27.78787878787879}
+Josh Norris: {'Shots Per Game': 2.1954887218045114, 'Shots Per Game vs. Calgary Flames': 1.9090909090909092, 'Shots Per Game in February': 1.7647058823529411}
+Mark Kastelic: {'Shots Per Game': 1.0, 'Shots Per Game vs. Calgary Flames': 'No Data', 'Shots Per Game in February': 0.0}
+Claude Giroux: {'Shots Per Game': 2.5930776426566884, 'Shots Per Game vs. Calgary Flames': 2.4, 'Shots Per Game in February': 2.6948051948051948}
+Derick Brassard: {'Shots Per Game': 1.9274193548387097, 'Shots Per Game vs. Calgary Flames': 2.0, 'Shots Per Game in February': 1.993006993006993}
+Nick Holden: {'Shots Per Game': 1.1937007874015748, 'Shots Per Game vs. Calgary Flames': 1.0555555555555556, 'Shots Per Game in February': 1.3225806451612903}
+Travis Hamonic: {'Shots Per Game': 1.7919375812743823, 'Shots Per Game vs. Calgary Flames': 1.7647058823529411, 'Shots Per Game in February': 2.0388349514563107}
+Austin Watson: {'Shots Per Game': 1.1802197802197802, 'Shots Per Game vs. Calgary Flames': 1.3157894736842106, 'Shots Per Game in February': 0.9428571428571428}
+Anton Forsberg: {'Saves Per Game': 26.607692307692307, 'Saves Per Game vs.Calgary Flames': 24.0, 'Shots Per Game in February': 26.428571428571427}
+Tyler Motte: {'Shots Per Game': 1.5328947368421053, 'Shots Per Game vs. Calgary Flames': 1.4285714285714286, 'Shots Per Game in February': 1.6857142857142857}
+Thomas Chabot: {'Shots Per Game': 2.456824512534819, 'Shots Per Game vs. Calgary Flames': 1.7333333333333334, 'Shots Per Game in February': 2.380952380952381}
+Mathieu Joseph: {'Shots Per Game': 1.1818181818181819, 'Shots Per Game vs. Calgary Flames': 1.0, 'Shots Per Game in February': 1.1142857142857143}
+Alex DeBrincat: {'Shots Per Game': 2.8782816229116945, 'Shots Per Game vs. Calgary Flames': 2.8333333333333335, 'Shots Per Game in February': 3.2063492063492065}
+Nikita Zaitsev: {'Shots Per Game': 1.0451306413301662, 'Shots Per Game vs. Calgary Flames': 1.2352941176470589, 'Shots Per Game in February': 1.0}
+Dylan Gambrell: {'Shots Per Game': 0.8634146341463415, 'Shots Per Game vs. Calgary Flames': 1.0, 'Shots Per Game in February': 1.0}
+Erik Brannstrom: {'Shots Per Game': 1.308641975308642, 'Shots Per Game vs. Calgary Flames': 1.4444444444444444, 'Shots Per Game in February': 1.5}
+Drake Batherson: {'Shots Per Game': 2.142857142857143, 'Shots Per Game vs. Calgary Flames': 1.9166666666666667, 'Shots Per Game in February': 1.7241379310344827}
+Parker Kelly: {'Shots Per Game': 1.1318681318681318, 'Shots Per Game vs. Calgary Flames': 1.0, 'Shots Per Game in February': 1.375}
+Brady Tkachuk: {'Shots Per Game': 3.6371951219512195, 'Shots Per Game vs. Calgary Flames': 3.466666666666667, 'Shots Per Game in February': 3.6785714285714284}
+Mads Sogaard: {'Saves Per Game': 17.0, 'Saves Per Game vs.Calgary Flames': 0, 'Shots Per Game in February': 3.0}
+Shane Pinto: {'Shots Per Game': 1.6029411764705883, 'Shots Per Game vs. Calgary Flames': 1.0, 'Shots Per Game in February': 0.0}
+Jake Sanderson: {'Shots Per Game': 1.6666666666666667, 'Shots Per Game vs. Calgary Flames': 'No Data', 'Shots Per Game in February': 1.0}
+Artem Zub: {'Shots Per Game': 1.02, 'Shots Per Game vs. Calgary Flames': 0.5454545454545454, 'Shots Per Game in February': 0.7692307692307693}

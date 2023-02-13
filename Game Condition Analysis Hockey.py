@@ -31,9 +31,9 @@ month = now.strftime("%B")
 # USER DEFINED SHOULD BE LIKE EX. "Kings"
 schedule_date = "?date=2023-02-13"
 schedule_url = f"https://statsapi.web.nhl.com/api/v1/schedule{schedule_date}"
-team = "Senators"
+team = "Predators"
 h_or_r = "Home"
-opponent = "Calgary Flames"
+opponent = "Arizona Coyotes"
 manual = False
 
 def get_teams(schedule_url):
