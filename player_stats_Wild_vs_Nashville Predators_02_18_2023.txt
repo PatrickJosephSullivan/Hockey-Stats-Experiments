@@ -1,0 +1,23 @@
+Marcus Foligno: {'Shots Per Game': 1.18005540166205, 'Shots Per Game vs. Nashville Predators': 0.8333333333333334, 'Shots Per Game in February': 1.219298245614035}
+Marc-Andre Fleury: {'Saves Per Game': 25.976361767728672, 'Saves Per Game vs.Nashville Predators': 24.318181818181817, 'Shots Per Game in February': 25.736486486486488}
+Alex Goligoski: {'Shots Per Game': 1.5250245338567223, 'Shots Per Game vs. Nashville Predators': 1.7, 'Shots Per Game in February': 1.4876543209876543}
+Ryan Reaves: {'Shots Per Game': 0.6633416458852868, 'Shots Per Game vs. Nashville Predators': 0.5128205128205128, 'Shots Per Game in February': 0.6532258064516129}
+Jared Spurgeon: {'Shots Per Game': 1.6650544135429262, 'Shots Per Game vs. Nashville Predators': 1.631578947368421, 'Shots Per Game in February': 1.7313432835820894}
+Mats Zuccarello: {'Shots Per Game': 2.078272604588394, 'Shots Per Game vs. Nashville Predators': 2.1578947368421053, 'Shots Per Game in February': 2.1016949152542375}
+Jon Merrill: {'Shots Per Game': 0.8457142857142858, 'Shots Per Game vs. Nashville Predators': 1.16, 'Shots Per Game in February': 0.8837209302325582}
+Jonas Brodin: {'Shots Per Game': 1.2774725274725274, 'Shots Per Game vs. Nashville Predators': 1.1891891891891893, 'Shots Per Game in February': 1.4555555555555555}
+Matt Dumba: {'Shots Per Game': 1.9073426573426573, 'Shots Per Game vs. Nashville Predators': 2.125, 'Shots Per Game in February': 1.9102564102564104}
+Ryan Hartman: {'Shots Per Game': 2.0, 'Shots Per Game vs. Nashville Predators': 2.2, 'Shots Per Game in February': 1.8625}
+Frederick Gaudreau: {'Shots Per Game': 1.3547008547008548, 'Shots Per Game vs. Nashville Predators': 1.2, 'Shots Per Game in February': 1.6666666666666667}
+Jake Middleton: {'Shots Per Game': 1.0, 'Shots Per Game vs. Nashville Predators': 1.6, 'Shots Per Game in February': 1.0952380952380953}
+Jordan Greenway: {'Shots Per Game': 1.3900293255131966, 'Shots Per Game vs. Nashville Predators': 2.1818181818181817, 'Shots Per Game in February': 1.4313725490196079}
+Joel Eriksson Ek: {'Saves Per Game': 25.0, 'Saves Per Game vs.Nashville Predators': 0, 'Shots Per Game in February': 0}
+Kirill Kaprizov: {'Shots Per Game': 3.413612565445026, 'Shots Per Game vs. Nashville Predators': 3.8, 'Shots Per Game in February': 3.16}
+Sam Steel: {'Shots Per Game': 1.184, 'Shots Per Game vs. Nashville Predators': 1.4285714285714286, 'Shots Per Game in February': 1.2}
+Filip Gustavsson: {'Saves Per Game': 27.019607843137255, 'Saves Per Game vs.Nashville Predators': 0, 'Shots Per Game in February': 26.833333333333332}
+Brandon Duhaime: {'Shots Per Game': 1.2142857142857142, 'Shots Per Game vs. Nashville Predators': 1.0, 'Shots Per Game in February': 0.8823529411764706}
+Mason Shaw: {'Shots Per Game': 1.7560975609756098, 'Shots Per Game vs. Nashville Predators': 5.0, 'Shots Per Game in February': 1.75}
+Calen Addison: {'Shots Per Game': 1.2428571428571429, 'Shots Per Game vs. Nashville Predators': 3.0, 'Shots Per Game in February': 1.1818181818181819}
+Connor Dewar: {'Shots Per Game': 1.1235955056179776, 'Shots Per Game vs. Nashville Predators': 1.3333333333333333, 'Shots Per Game in February': 1.1176470588235294}
+Adam Beckman: {'Shots Per Game': 1.4, 'Shots Per Game vs. Nashville Predators': 2.0, 'Shots Per Game in February': 1.0}
+Matt Boldy: {'Shots Per Game': 2.8137254901960786, 'Shots Per Game vs. Nashville Predators': 5.666666666666667, 'Shots Per Game in February': 3.235294117647059}

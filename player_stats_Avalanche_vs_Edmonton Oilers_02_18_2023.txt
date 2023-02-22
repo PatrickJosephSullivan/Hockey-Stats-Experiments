@@ -1,0 +1,24 @@
+Erik Johnson: {'Shots Per Game': 2.0363436123348015, 'Shots Per Game vs. Edmonton Oilers': 2.3157894736842106, 'Shots Per Game in February': 2.191666666666667}
+Charles Hudon: {'Shots Per Game': 2.0522388059701493, 'Shots Per Game vs. Edmonton Oilers': 1.0, 'Shots Per Game in February': 1.9523809523809523}
+Sampo Ranta: {'Shots Per Game': 0.875, 'Shots Per Game vs. Edmonton Oilers': 'No Data', 'Shots Per Game in February': 'No Data'}
+Jean-Luc Foudy: {'Shots Per Game': 1.3333333333333333, 'Shots Per Game vs. Edmonton Oilers': 'No Data', 'Shots Per Game in February': 'No Data'}
+Andrew Cogliano: {'Shots Per Game': 1.5591939546599496, 'Shots Per Game vs. Edmonton Oilers': 1.55, 'Shots Per Game in February': 1.4640883977900552}
+Darren Helm: {'Shots Per Game': 1.8824969400244798, 'Shots Per Game vs. Edmonton Oilers': 1.6896551724137931, 'Shots Per Game in February': 2.0135135135135136}
+Josh Manson: {'Shots Per Game': 1.2515090543259557, 'Shots Per Game vs. Edmonton Oilers': 1.2916666666666667, 'Shots Per Game in February': 1.1126760563380282}
+Kurtis MacDermid: {'Shots Per Game': 0.7211538461538461, 'Shots Per Game vs. Edmonton Oilers': 0.6, 'Shots Per Game in February': 0.8064516129032258}
+Artturi Lehkonen: {'Shots Per Game': 2.142857142857143, 'Shots Per Game vs. Edmonton Oilers': 1.9047619047619047, 'Shots Per Game in February': 2.012987012987013}
+Nathan MacKinnon: {'Shots Per Game': 3.8558823529411765, 'Shots Per Game vs. Edmonton Oilers': 3.85, 'Shots Per Game in February': 4.09}
+Valeri Nichushkin: {'Shots Per Game': 1.8813953488372093, 'Shots Per Game vs. Edmonton Oilers': 2.1538461538461537, 'Shots Per Game in February': 1.8307692307692307}
+Andreas Englund: {'Shots Per Game': 0.49230769230769234, 'Shots Per Game vs. Edmonton Oilers': 'No Data', 'Shots Per Game in February': 0.6363636363636364}
+Devon Toews: {'Shots Per Game': 2.0314685314685317, 'Shots Per Game vs. Edmonton Oilers': 1.8333333333333333, 'Shots Per Game in February': 1.7843137254901962}
+Mikko Rantanen: {'Shots Per Game': 2.718004338394794, 'Shots Per Game vs. Edmonton Oilers': 2.75, 'Shots Per Game in February': 2.7260273972602738}
+Evan Rodrigues: {'Shots Per Game': 2.3268156424581004, 'Shots Per Game vs. Edmonton Oilers': 2.5714285714285716, 'Shots Per Game in February': 2.2419354838709675}
+Denis Malgin: {'Shots Per Game': 1.4410480349344978, 'Shots Per Game vs. Edmonton Oilers': 2.2, 'Shots Per Game in February': 0.972972972972973}
+Samuel Girard: {'Shots Per Game': 1.3695090439276485, 'Shots Per Game vs. Edmonton Oilers': 2.090909090909091, 'Shots Per Game in February': 1.4375}
+Cale Makar: {'Shots Per Game': 2.717488789237668, 'Shots Per Game vs. Edmonton Oilers': 2.6666666666666665, 'Shots Per Game in February': 2.225806451612903}
+Alexandar Georgiev: {'Saves Per Game': 27.197604790419163, 'Saves Per Game vs.Edmonton Oilers': 29.5, 'Shots Per Game in February': 29.807692307692307}
+Pavel Francouz: {'Saves Per Game': 26.958333333333332, 'Saves Per Game vs.Edmonton Oilers': 0, 'Shots Per Game in February': 27.076923076923077}
+Logan O'Connor: {'Shots Per Game': 1.4067796610169492, 'Shots Per Game vs. Edmonton Oilers': 1.0, 'Shots Per Game in February': 1.0}
+Bowen Byram: {'Shots Per Game': 1.359375, 'Shots Per Game vs. Edmonton Oilers': 1.5, 'Shots Per Game in February': 0.6923076923076923}
+Alex Newhook: {'Shots Per Game': 1.5384615384615385, 'Shots Per Game vs. Edmonton Oilers': 1.5, 'Shots Per Game in February': 1.7142857142857142}
+Ben Meyers: {'Shots Per Game': 0.9117647058823529, 'Shots Per Game vs. Edmonton Oilers': 1.0, 'Shots Per Game in February': 0.0}

@@ -29,9 +29,9 @@ now = datetime.now()
 today = datetime.now().strftime("%m_%d_%Y")
 month = now.strftime("%B")
 # USER DEFINED SHOULD BE LIKE EX. "Kings"
-schedule_date = "?date=2023-02-13"
+schedule_date = "?date=2023-02-19"
 schedule_url = f"https://statsapi.web.nhl.com/api/v1/schedule{schedule_date}"
-team = "Predators"
+team = "Blue Jackets"
 h_or_r = "Home"
 opponent = "Arizona Coyotes"
 manual = False
@@ -122,9 +122,13 @@ def parse_name_parts(player_dict):
 def get_player_dfs(player_dict):
     print(player_dict)
     for k, v in player_dict.items():
+        # Initiate variables
         s_per_game = 0
         sv_per_game = 0
+        opp_s_per_gp = 0
         opp_sv_per_gp = 0
+        month_s_per_gp = 0
+        month_sv_per_gp = 0
         # Receive player url from player dict
         url = v
         # Make a request to hockey reference either by selenium or requests depending on 429 status

@@ -1,0 +1,20 @@
+Ryan Murray: {'Shots Per Game': 0.9258426966292135, 'Shots Per Game vs. Colorado Avalanche': 1.5714285714285714, 'Shots Per Game in February': 0.9615384615384616}
+Evander Kane: {'Shots Per Game': 3.5526315789473686, 'Shots Per Game vs. Colorado Avalanche': 3.225806451612903, 'Shots Per Game in February': 3.5}
+Tyson Barrie: {'Shots Per Game': 2.2002706359945874, 'Shots Per Game vs. Colorado Avalanche': 1.8333333333333333, 'Shots Per Game in February': 2.3095238095238093}
+Zach Hyman: {'Shots Per Game': 2.3760504201680672, 'Shots Per Game vs. Colorado Avalanche': 2.9166666666666665, 'Shots Per Game in February': 2.1494252873563218}
+Jack Campbell: {'Saves Per Game': 25.682926829268293, 'Saves Per Game vs.Colorado Avalanche': 29.333333333333332, 'Shots Per Game in February': 26.17391304347826}
+Ryan Nugent-Hopkins: {'Shots Per Game': 2.378064516129032, 'Shots Per Game vs. Colorado Avalanche': 2.814814814814815, 'Shots Per Game in February': 2.70873786407767}
+Cody Ceci: {'Shots Per Game': 1.4875549048316252, 'Shots Per Game vs. Colorado Avalanche': 1.5555555555555556, 'Shots Per Game in February': 1.5490196078431373}
+Brett Kulak: {'Shots Per Game': 1.3487179487179488, 'Shots Per Game vs. Colorado Avalanche': 1.2222222222222223, 'Shots Per Game in February': 1.4411764705882353}
+Darnell Nurse: {'Shots Per Game': 2.3621013133208257, 'Shots Per Game vs. Colorado Avalanche': 2.611111111111111, 'Shots Per Game in February': 2.32183908045977}
+Leon Draisaitl: {'Shots Per Game': 2.630718954248366, 'Shots Per Game vs. Colorado Avalanche': 2.611111111111111, 'Shots Per Game in February': 2.704081632653061}
+Warren Foegele: {'Shots Per Game': 1.7058823529411764, 'Shots Per Game vs. Colorado Avalanche': 2.0, 'Shots Per Game in February': 1.5789473684210527}
+Connor McDavid: {'Shots Per Game': 3.3812154696132595, 'Shots Per Game vs. Colorado Avalanche': 3.235294117647059, 'Shots Per Game in February': 3.595505617977528}
+Derek Ryan: {'Shots Per Game': 1.2447257383966244, 'Shots Per Game vs. Colorado Avalanche': 1.2142857142857142, 'Shots Per Game in February': 1.1343283582089552}
+Jesse Puljujarvi: {'Shots Per Game': 1.8717948717948718, 'Shots Per Game vs. Colorado Avalanche': 2.375, 'Shots Per Game in February': 1.7674418604651163}
+Stuart Skinner: {'Saves Per Game': 28.545454545454547, 'Saves Per Game vs.Colorado Avalanche': 43.0, 'Shots Per Game in February': 26.333333333333332}
+Kailer Yamamoto: {'Shots Per Game': 1.3944954128440368, 'Shots Per Game vs. Colorado Avalanche': 1.5, 'Shots Per Game in February': 1.542857142857143}
+Klim Kostin: {'Shots Per Game': 0.9285714285714286, 'Shots Per Game vs. Colorado Avalanche': 0.0, 'Shots Per Game in February': 0.5}
+Ryan McLeod: {'Shots Per Game': 1.1451612903225807, 'Shots Per Game vs. Colorado Avalanche': 0.75, 'Shots Per Game in February': 1.2222222222222223}
+Evan Bouchard: {'Shots Per Game': 2.2911392405063293, 'Shots Per Game vs. Colorado Avalanche': 3.5, 'Shots Per Game in February': 2.1724137931034484}
+Philip Broberg: {'Shots Per Game': 0.9433962264150944, 'Shots Per Game vs. Colorado Avalanche': 0.0, 'Shots Per Game in February': 0.6666666666666666}

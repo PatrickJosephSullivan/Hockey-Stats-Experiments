@@ -1,0 +1,21 @@
+Zack Kassian: {'Shots Per Game': 1.2237654320987654, 'Shots Per Game vs. Columbus Blue Jackets': 1.5263157894736843, 'Shots Per Game in February': 1.2830188679245282}
+Patrik Nemeth: {'Shots Per Game': 0.9624217118997912, 'Shots Per Game vs. Columbus Blue Jackets': 1.5294117647058822, 'Shots Per Game in February': 1.1728395061728396}
+Nick Bjugstad: {'Shots Per Game': 2.238655462184874, 'Shots Per Game vs. Columbus Blue Jackets': 2.55, 'Shots Per Game in February': 2.5232558139534884}
+Travis Boyd: {'Shots Per Game': 0.924901185770751, 'Shots Per Game vs. Columbus Blue Jackets': 1.3333333333333333, 'Shots Per Game in February': 0.8974358974358975}
+Shayne Gostisbehere: {'Shots Per Game': 2.2720156555772992, 'Shots Per Game vs. Columbus Blue Jackets': 2.8, 'Shots Per Game in February': 2.3529411764705883}
+Liam O'Brien: {'Shots Per Game': 0.7857142857142857, 'Shots Per Game vs. Columbus Blue Jackets': 0.3333333333333333, 'Shots Per Game in February': 1.1111111111111112}
+Josh Brown: {'Shots Per Game': 0.7747747747747747, 'Shots Per Game vs. Columbus Blue Jackets': 1.1666666666666667, 'Shots Per Game in February': 0.7272727272727273}
+Nick Ritchie: {'Shots Per Game': 1.7276688453159041, 'Shots Per Game vs. Columbus Blue Jackets': 1.875, 'Shots Per Game in February': 1.8666666666666667}
+Nick Schmaltz: {'Shots Per Game': 1.6104218362282878, 'Shots Per Game vs. Columbus Blue Jackets': 1.0, 'Shots Per Game in February': 1.6307692307692307}
+Christian Fischer: {'Shots Per Game': 1.5415549597855227, 'Shots Per Game vs. Columbus Blue Jackets': 2.75, 'Shots Per Game in February': 1.4285714285714286}
+Lawson Crouse: {'Shots Per Game': 1.606060606060606, 'Shots Per Game vs. Columbus Blue Jackets': 1.8888888888888888, 'Shots Per Game in February': 1.55}
+Karel Vejmelka: {'Saves Per Game': 29.666666666666668, 'Saves Per Game vs.Columbus Blue Jackets': 0, 'Shots Per Game in February': 32.375}
+Connor Ingram: {'Saves Per Game': 31.19047619047619, 'Saves Per Game vs.Columbus Blue Jackets': 30.0, 'Shots Per Game in February': 43.5}
+Clayton Keller: {'Shots Per Game': 2.474698795180723, 'Shots Per Game vs. Columbus Blue Jackets': 2.5555555555555554, 'Shots Per Game in February': 2.338235294117647}
+Jakob Chychrun: {'Shots Per Game': 2.3726541554959786, 'Shots Per Game vs. Columbus Blue Jackets': 3.5714285714285716, 'Shots Per Game in February': 2.121212121212121}
+Troy Stecher: {'Shots Per Game': 1.3719806763285025, 'Shots Per Game vs. Columbus Blue Jackets': 1.8571428571428572, 'Shots Per Game in February': 1.463768115942029}
+Juuso Valimaki: {'Shots Per Game': 1.2481203007518797, 'Shots Per Game vs. Columbus Blue Jackets': 0.0, 'Shots Per Game in February': 1.9}
+Barrett Hayton: {'Shots Per Game': 1.5436241610738255, 'Shots Per Game vs. Columbus Blue Jackets': 1.3333333333333333, 'Shots Per Game in February': 1.5238095238095237}
+Jack McBain: {'Shots Per Game': 0.1111111111111111, 'Shots Per Game vs. Columbus Blue Jackets': 'No Data', 'Shots Per Game in February': 'No Data'}
+Victor Soderstrom: {'Shots Per Game': 0.8695652173913043, 'Shots Per Game vs. Columbus Blue Jackets': 1.0, 'Shots Per Game in February': 0.0}
+Matias Maccelli: {'Shots Per Game': 0.8, 'Shots Per Game vs. Columbus Blue Jackets': 0.0, 'Shots Per Game in February': 0.4}

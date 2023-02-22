@@ -1,0 +1,26 @@
+Brandon Saad: {'Shots Per Game': 2.367724867724868, 'Shots Per Game vs. Ottawa Senators': 2.4705882352941178, 'Shots Per Game in February': 2.2035398230088497}
+Scott Perunovich: {'Shots Per Game': 0.7368421052631579, 'Shots Per Game vs. Ottawa Senators': 'No Data', 'Shots Per Game in February': 'No Data'}
+Marco Scandella: {'Shots Per Game': 1.3333333333333333, 'Shots Per Game vs. Ottawa Senators': 1.588235294117647, 'Shots Per Game in February': 1.5208333333333333}
+Thomas Greiss: {'Saves Per Game': 25.23204419889503, 'Saves Per Game vs.Ottawa Senators': 24.083333333333332, 'Shots Per Game in February': 24.01818181818182}
+Robert Bortuzzo: {'Shots Per Game': 0.9500959692898272, 'Shots Per Game vs. Ottawa Senators': 1.2307692307692308, 'Shots Per Game in February': 0.9753086419753086}
+Brayden Schenn: {'Shots Per Game': 2.0566265060240965, 'Shots Per Game vs. Ottawa Senators': 1.7692307692307692, 'Shots Per Game in February': 2.0381679389312977}
+Nick Leddy: {'Shots Per Game': 1.3806881243063263, 'Shots Per Game vs. Ottawa Senators': 1.7, 'Shots Per Game in February': 1.321917808219178}
+Tyler Pitlick: {'Shots Per Game': 1.304945054945055, 'Shots Per Game vs. Ottawa Senators': 1.6363636363636365, 'Shots Per Game in February': 1.6341463414634145}
+Justin Faulk: {'Shots Per Game': 2.4226044226044228, 'Shots Per Game vs. Ottawa Senators': 2.5416666666666665, 'Shots Per Game in February': 2.277310924369748}
+Josh Leivo: {'Shots Per Game': 1.7341269841269842, 'Shots Per Game vs. Ottawa Senators': 1.1428571428571428, 'Shots Per Game in February': 1.9069767441860466}
+Jordan Binnington: {'Saves Per Game': 25.82843137254902, 'Saves Per Game vs.Ottawa Senators': 28.0, 'Shots Per Game in February': 25.105263157894736}
+Torey Krug: {'Shots Per Game': 2.4363905325443787, 'Shots Per Game vs. Ottawa Senators': 2.5185185185185186, 'Shots Per Game in February': 2.4423076923076925}
+Colton Parayko: {'Shots Per Game': 2.1730418943533696, 'Shots Per Game vs. Ottawa Senators': 2.0833333333333335, 'Shots Per Game in February': 2.392857142857143}
+Pavel Buchnevich: {'Shots Per Game': 2.0602409638554215, 'Shots Per Game vs. Ottawa Senators': 1.1818181818181819, 'Shots Per Game in February': 2.2857142857142856}
+Nathan Walker: {'Shots Per Game': 0.9186046511627907, 'Shots Per Game vs. Ottawa Senators': 1.0, 'Shots Per Game in February': 0.75}
+Ivan Barbashev: {'Shots Per Game': 1.0839506172839506, 'Shots Per Game vs. Ottawa Senators': 1.0, 'Shots Per Game in February': 1.2112676056338028}
+Sammy Blais: {'Shots Per Game': 1.0056818181818181, 'Shots Per Game vs. Ottawa Senators': 1.2, 'Shots Per Game in February': 1.103448275862069}
+Matthew Highmore: {'Shots Per Game': 1.1897810218978102, 'Shots Per Game vs. Ottawa Senators': 1.5, 'Shots Per Game in February': 1.0769230769230769}
+Logan Brown: {'Shots Per Game': 0.8414634146341463, 'Shots Per Game vs. Ottawa Senators': 'No Data', 'Shots Per Game in February': 0.6666666666666666}
+Jordan Kyrou: {'Shots Per Game': 2.3214285714285716, 'Shots Per Game vs. Ottawa Senators': 1.5, 'Shots Per Game in February': 2.1176470588235294}
+Robert Thomas: {'Shots Per Game': 1.297945205479452, 'Shots Per Game vs. Ottawa Senators': 2.25, 'Shots Per Game in February': 1.4523809523809523}
+Calle Rosen: {'Shots Per Game': 1.2054794520547945, 'Shots Per Game vs. Ottawa Senators': 2.0, 'Shots Per Game in February': 1.8}
+Alexey Toropchenko: {'Shots Per Game': 1.3043478260869565, 'Shots Per Game vs. Ottawa Senators': 0.5, 'Shots Per Game in February': 1.3333333333333333}
+Tyler Tucker: {'Shots Per Game': 0.9333333333333333, 'Shots Per Game vs. Ottawa Senators': 1.0, 'Shots Per Game in February': 0.6666666666666666}
+Nikita Alexandrov: {'Shots Per Game': 1.0, 'Shots Per Game vs. Ottawa Senators': 'No Data', 'Shots Per Game in February': 'No Data'}
+Jake Neighbours: {'Shots Per Game': 1.162162162162162, 'Shots Per Game vs. Ottawa Senators': 3.0, 'Shots Per Game in February': 1.0}
