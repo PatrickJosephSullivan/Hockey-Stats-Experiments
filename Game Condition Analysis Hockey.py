@@ -18,6 +18,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 import pandas as pd
 
+# TODO Add Functionality for Statistical Significance Calculation Based on Games Played
+
 # Dataframe print options
 pd.options.display.max_columns = None
 pd.options.display.max_rows = None
@@ -29,12 +31,13 @@ now = datetime.now()
 today = datetime.now().strftime("%m_%d_%Y")
 month = now.strftime("%B")
 # USER DEFINED SHOULD BE LIKE EX. "Kings"
-schedule_date = "?date=2023-02-19"
+schedule_date = "?date=2023-02-28"
 schedule_url = f"https://statsapi.web.nhl.com/api/v1/schedule{schedule_date}"
-team = "Blue Jackets"
+team = "Senators"
 h_or_r = "Home"
-opponent = "Arizona Coyotes"
+opponent = "Detroit Red Wings"
 manual = False
+
 
 def get_teams(schedule_url):
     game_number = 0
@@ -50,7 +53,8 @@ def get_teams(schedule_url):
         road_team = i["teams"]["away"]["team"]["name"]
         road_team_record = i["teams"]["away"]["leagueRecord"]
         del road_team_record["type"]
-        teams_dict.update({game_number: {"home": home_team, "home team record": home_team_record, "road": road_team, "road team record": road_team_record}})
+        teams_dict.update({game_number: {"home": home_team, "home team record": home_team_record, "road": road_team,
+                                         "road team record": road_team_record}})
     for k, v in teams_dict.items():
         print(k, v)
 
@@ -67,10 +71,11 @@ def get_team_id(team_name):
         else:
             None
 
+
 # Define a function to get team's roster
 def get_team_roster(team_id):
     player_ids = {}
-    url = "https://statsapi.web.nhl.com/api/v1/teams/"+str(team_id)+"/?expand=team.roster"
+    url = "https://statsapi.web.nhl.com/api/v1/teams/" + str(team_id) + "/?expand=team.roster"
     response = requests.get(url)
     roster = response.json()
     roster = roster["teams"][0]["roster"]["roster"]
@@ -81,6 +86,7 @@ def get_team_roster(team_id):
         #     player_ids.update({n["fullName"]: n["id"]})
     # print(player_ids)
     return player_ids
+
 
 def parse_name_parts(player_dict):
     for k in player_dict:
@@ -123,12 +129,8 @@ def get_player_dfs(player_dict):
     print(player_dict)
     for k, v in player_dict.items():
         # Initiate variables
-        s_per_game = 0
-        sv_per_game = 0
-        opp_s_per_gp = 0
-        opp_sv_per_gp = 0
-        month_s_per_gp = 0
-        month_sv_per_gp = 0
+        s_per_game, sv_per_game, opp_s_per_gp, opp_sv_per_gp, month_s_per_gp, month_sv_per_gp, home_s_per_gp, \
+        road_s_per_gp, home_sv_per_gp, road_sv_per_gp, h_or_r_value = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         # Receive player url from player dict
         url = v
         # Make a request to hockey reference either by selenium or requests depending on 429 status
@@ -160,7 +162,10 @@ def get_player_dfs(player_dict):
         opp_row = df.loc[df['Value'] == opponent]
         month_row = df.loc[df['Value'] == month]
         h_or_r_row = df.loc[df['Value'] == h_or_r]
-        # Convert the "S" column to integers
+
+        """START OF CALCULATIONS"""
+
+        # Convert the "S" and "SV" column to integers and then run shots per game and saves per game calcs
         if "S" in df:
             df["S"] = df["S"].astype(int)
             s = int(total_row['S'])
@@ -171,7 +176,7 @@ def get_player_dfs(player_dict):
             sv = int(total_row['SV'])
             gp = int(total_row['GP'])
             sv_per_game = sv / gp
-
+        # Run opponent calculations
         if not opp_row.empty:
             if "S" in df:
                 opp_s = int(opp_row['S'])
@@ -183,28 +188,55 @@ def get_player_dfs(player_dict):
                 opp_sv_per_gp = opp_sv / opp_gp
         else:
             opp_s_per_gp = "No Data"
-
+        # Runs month calculations
         if not month_row.empty:
             if "S" in df:
                 s_per_month = int(month_row['S'])
                 gp_per_month = int(month_row['GP'])
-                month_s_per_gp = s_per_month/gp_per_month
+                month_s_per_gp = s_per_month / gp_per_month
             elif "SV" in df:
                 sv_per_month = int(month_row['SV'])
                 gp_per_month = int(month_row['GP'])
                 month_sv_per_gp = sv_per_month / gp_per_month
         else:
             month_s_per_gp = "No Data"
-
+        # Runs home or road data
+        if not h_or_r_row.empty:
+            if "S" in df and h_or_r == "Home":
+                home_s_per_gp = int(h_or_r_row['S'])
+                gp_per_month = int(h_or_r_row['GP'])
+                home_s_per_gp = home_s_per_gp / gp_per_month
+            if "SV" in df and h_or_r == "Home":
+                home_sv_per_gp = int(h_or_r_row['SV'])
+                gp_per_month = int(h_or_r_row['GP'])
+                home_sv_per_gp = home_sv_per_gp / gp_per_month
+            if "S" in df and h_or_r == "Road":
+                road_s_per_gp = int(h_or_r_row['S'])
+                gp_per_month = int(h_or_r_row['GP'])
+                road_s_per_gp = road_s_per_gp / gp_per_month
+            if "SV" in df and h_or_r == "Road":
+                road_sv_per_gp = int(h_or_r_row['SV'])
+                gp_per_month = int(h_or_r_row['GP'])
+                road_sv_per_gp = road_sv_per_gp / gp_per_month
+        else:
+            h_or_r_value = "No Data"
+        # Find the value that's greater than 0 and get variable ready for print statement
+        for i in [home_s_per_gp, road_s_per_gp, home_sv_per_gp, road_sv_per_gp]:
+            if i > 0:
+                h_or_r_value = i
+            else:
+                h_or_r_value = "No Data"
+        # if a value is found, put it in the dictionary
         if s_per_game > 0:
-            player_stats.update({f"{k}": {"Shots Per Game": s_per_game, f"Shots Per Game vs. {opponent}": opp_s_per_gp, f"Shots Per Game in {month}": month_s_per_gp}})
+            player_stats.update({f"{k}": {"Shots Per Game": s_per_game, f"Shots Per Game vs. {opponent}": opp_s_per_gp,
+                                          f"Shots Per Game in {month}": month_s_per_gp, f"At {h_or_r}": h_or_r_value}})
         if sv_per_game > 0:
-            player_stats.update({f"{k}": {"Saves Per Game": sv_per_game, f"Saves Per Game vs.{opponent}": opp_sv_per_gp, f"Shots Per Game in {month}": month_sv_per_gp}})
-        s_per_game, sv_per_game, opp_sv_per_gp, opp_s_per_gp = 0,0,0,0
-        # for player, stats in player_stats.items():
-        #     print(player, stats)
+            player_stats.update({f"{k}": {"Saves Per Game": sv_per_game, f"Saves Per Game vs.{opponent}": opp_sv_per_gp,
+                                          f"Shots Per Game in {month}": month_sv_per_gp, f"At {h_or_r}": h_or_r_value}})
+        """Debugging print statement"""
+        for player, stats in player_stats.items():
+            print(player, stats)
         time.sleep(5)
-
 
 
 get_teams(schedule_url)
