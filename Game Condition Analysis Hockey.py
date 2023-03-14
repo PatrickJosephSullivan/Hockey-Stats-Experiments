@@ -34,10 +34,10 @@ month = now.strftime("%B")
 schedule_date = "?date=2023-03-14"
 schedule_url = f"https://statsapi.web.nhl.com/api/v1/schedule{schedule_date}"
 # TEAM SHOULD BE LOOK LIKE, "Kings" AND OPPONENT SHOULD LOOK LIKE, "Detroit Wed Rings"
-team = "Penguins"
-opponent = "Montreal Canadiens"
+team = "Canadiens"
+opponent = "Pittsburgh Penguins"
 # Defines whether to pull stats for "Home" or "Road"
-h_or_r = "Home"
+h_or_r = "Road"
 # Invokes a function that bypasses cloudflare firewalls. Only use if timed out by HockeyReference.com,
 # much slower method
 manual = False
