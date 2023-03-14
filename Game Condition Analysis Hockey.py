@@ -226,8 +226,10 @@ def get_player_dfs(player_dict):
             h_or_r_value = "No Data"
         # Find the value that's greater than 0 and get variable ready for print statement
         for i in [home_s_per_gp, road_s_per_gp, home_sv_per_gp, road_sv_per_gp]:
+            # print(i)
             if i > 0:
                 h_or_r_value = i
+                break
             else:
                 h_or_r_value = "No Data"
         # if a value is found, put it in the dictionary
