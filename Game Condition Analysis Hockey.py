@@ -30,12 +30,16 @@ teams_dict = {}
 now = datetime.now()
 today = datetime.now().strftime("%m_%d_%Y")
 month = now.strftime("%B")
-# USER DEFINED SHOULD BE LIKE EX. "Kings"
-schedule_date = "?date=2023-02-28"
+# Defines what schedule date should be pulled from nhl.com
+schedule_date = "?date=2023-03-14"
 schedule_url = f"https://statsapi.web.nhl.com/api/v1/schedule{schedule_date}"
-team = "Senators"
-h_or_r = "Home"
-opponent = "Detroit Red Wings"
+# TEAM SHOULD BE LOOK LIKE, "Kings" AND OPPONENT SHOULD LOOK LIKE, "Detroit Wed Rings"
+team = "Lightning"
+opponent = "New Jersey Devils"
+# Defines whether to pull stats for "Home" or "Road"
+h_or_r = "Road"
+# Invokes a function that bypasses cloudflare firewalls. Only use if timed out by HockeyReference.com,
+# much slower method
 manual = False
 
 
