@@ -223,7 +223,7 @@ def get_player_dfs(player_dict):
                 gp_per_month = int(h_or_r_row['GP'])
                 road_sv_per_gp = road_sv_per_gp / gp_per_month
         else:
-            h_or_r_value = "No Data"
+            h_or_r_value = "NULL"
         # Find the value that's greater than 0 and get variable ready for print statement
         for i in [home_s_per_gp, road_s_per_gp, home_sv_per_gp, road_sv_per_gp]:
             # print(i)
@@ -234,11 +234,9 @@ def get_player_dfs(player_dict):
                 h_or_r_value = "No Data"
         # if a value is found, put it in the dictionary
         if s_per_game > 0:
-            player_stats.update({f"{k}": {"Shots Per Game": s_per_game, f"Shots Per Game vs. {opponent}": opp_s_per_gp,
-                                          f"Shots Per Game in {month}": month_s_per_gp, f"At {h_or_r}": h_or_r_value}})
+            player_stats.update({k: {s_per_game, opp_s_per_gp, month_s_per_gp, h_or_r_value}})
         if sv_per_game > 0:
-            player_stats.update({f"{k}": {"Saves Per Game": sv_per_game, f"Saves Per Game vs.{opponent}": opp_sv_per_gp,
-                                          f"Shots Per Game in {month}": month_sv_per_gp, f"At {h_or_r}": h_or_r_value}})
+            player_stats.update({k: {sv_per_game, opp_sv_per_gp, month_sv_per_gp, h_or_r_value}})
         """Debugging print statement"""
         for player, stats in player_stats.items():
             print(player, stats)
@@ -261,6 +259,10 @@ print(player_dict)
 player_urls = parse_name_parts(player_dict)
 print(player_urls)
 get_player_dfs(player_dict)
-with open(f"player_stats_{team}_vs_{opponent}_{today}.txt", "w") as f:
+with open(f"player_stats_{team}_vs_{opponent}_{today}.csv", "w") as f:
+    f.write(f"Player, Shots or Saves, Shots or Saves Against Opponent, Shots or Saves in {month}, Shots or Saves at "
+            f"{h_or_r}\n")
     for k, v in player_stats.items():
-        f.write(f"{k}: {v}\n")
+        v = str(v)
+        v = v.strip("{}")
+        f.write(f"{k}, {v}\n")
