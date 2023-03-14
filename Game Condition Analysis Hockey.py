@@ -34,10 +34,10 @@ month = now.strftime("%B")
 schedule_date = "?date=2023-03-14"
 schedule_url = f"https://statsapi.web.nhl.com/api/v1/schedule{schedule_date}"
 # TEAM SHOULD BE LOOK LIKE, "Kings" AND OPPONENT SHOULD LOOK LIKE, "Detroit Wed Rings"
-team = "Canadiens"
-opponent = "Pittsburgh Penguins"
+team = "Flyers"
+opponent = "Vegas Golden Knights"
 # Defines whether to pull stats for "Home" or "Road"
-h_or_r = "Road"
+h_or_r = "Home" """Road"""
 # Invokes a function that bypasses cloudflare firewalls. Only use if timed out by HockeyReference.com,
 # much slower method
 manual = False
@@ -191,7 +191,7 @@ def get_player_dfs(player_dict):
                 opp_gp = int(opp_row['GP'])
                 opp_sv_per_gp = opp_sv / opp_gp
         else:
-            opp_s_per_gp = "No Data"
+            opp_s_per_gp = "NULL"
         # Runs month calculations
         if not month_row.empty:
             if "S" in df:
@@ -203,7 +203,7 @@ def get_player_dfs(player_dict):
                 gp_per_month = int(month_row['GP'])
                 month_sv_per_gp = sv_per_month / gp_per_month
         else:
-            month_s_per_gp = "No Data"
+            month_s_per_gp = "NULL"
         # Runs home or road data
         if not h_or_r_row.empty:
             if "S" in df and h_or_r == "Home":
@@ -231,7 +231,7 @@ def get_player_dfs(player_dict):
                 h_or_r_value = i
                 break
             else:
-                h_or_r_value = "No Data"
+                h_or_r_value = "NULL"
         # if a value is found, put it in the dictionary
         if s_per_game > 0:
             player_stats.update({k: {s_per_game, opp_s_per_gp, month_s_per_gp, h_or_r_value}})
