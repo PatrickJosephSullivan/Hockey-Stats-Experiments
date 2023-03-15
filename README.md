@@ -3,7 +3,7 @@
 A personal project to make more educated choices in sportsbetting.
 
 CURRENT STATE OF THIS PROJECT:
-UNFINISHED
+
 The main file for running calculations is Game Condition Analysis. After the import statements, you can enter a team to pull their player info. 
 It provides their shots/saves on goal on average, at home/road, in the current month, and against an opponent.
 
