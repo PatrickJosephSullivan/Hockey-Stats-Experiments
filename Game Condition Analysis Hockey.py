@@ -18,7 +18,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 import pandas as pd
 
-# TODO Add Functionality for Statistical Significance Calculation Based on Games Played
+# TODO Add loop through teams.
+# TODO Add Functionality for Statistical Significance Calculation Based on Games Played.
 
 # Dataframe print options
 pd.options.display.max_columns = None
@@ -31,7 +32,7 @@ now = datetime.now()
 today = datetime.now().strftime("%m_%d_%Y")
 month = now.strftime("%B")
 # Defines what schedule date should be pulled from nhl.com
-schedule_date = "?date=2023-03-14"
+schedule_date = "?date=2023-03-16"
 schedule_url = f"https://statsapi.web.nhl.com/api/v1/schedule{schedule_date}"
 # TEAM SHOULD BE LOOK LIKE, "Kings" AND OPPONENT SHOULD LOOK LIKE, "Detroit Wed Rings"
 team = "Bruins"
@@ -44,21 +45,30 @@ manual = False
 
 
 def get_teams(schedule_url):
+    """Pulls all team schedules from the NHL API when provided with link"""
+    # Gives each game on the schedule a value so that games can be identified easier
     game_number = 0
+    # Pulls text from webpage
     url = schedule_url
     response = requests.get(url)
     text = response.json()
     all_teams = text["dates"][0]["games"]
+    # iterates through all_teams text.
     for i in all_teams:
+        # Adds 1 to the ticker
         game_number += 1
+        # Finds home team
         home_team = i["teams"]["home"]["team"]["name"]
         home_team_record = i["teams"]["home"]["leagueRecord"]
         del home_team_record["type"]
+        # Finds away team
         road_team = i["teams"]["away"]["team"]["name"]
         road_team_record = i["teams"]["away"]["leagueRecord"]
         del road_team_record["type"]
+        # Adds game to the teams_dict dictionary and then queries the next game
         teams_dict.update({game_number: {"home": home_team, "home team record": home_team_record, "road": road_team,
                                          "road team record": road_team_record}})
+    # Prints today's schedule for accessibility. May want to comment out later when we can loop through all teams.
     for k, v in teams_dict.items():
         print(k, v)
 
@@ -243,16 +253,29 @@ def get_player_dfs(player_dict):
         time.sleep(5)
 
 
-get_teams(schedule_url)
-# for i in teams_dict:
-#     for k, v in teams_dict[i].items():
-#         if k == "home":
-#             team = v
-#             print(team)
-#         if k == "road":
-#             opponent = v
-#             print(opponent)
+def loop_teams(schedule_date):
+    """Experimental function for looping through teams.
+    Hopefully will eliminate having to type in
+    each team individually"""
+    # new_teams_dict = str(teams_dict.values())
+    # new_teams_dict = new_teams_dict.strip("dict_values([])")
+    # new_teams_dict = dict(new_teams_dict)
+    # new_teams_dict = dict(new_teams_dict)
+    # print(new_teams_dict)
+    for i in teams_dict.values():
+        # print(i)
+        # print(type(i))
+        for k, v in i.items():
+            if k == 'home':
+                h_or_r = "Home"
+                print(h_or_r, v)
+            elif k == 'road':
+                h_or_r = "Road"
+                print(h_or_r, v)
 
+
+get_teams(schedule_url)
+loop_teams(schedule_date)
 team_id = get_team_id(team)
 player_dict = get_team_roster(team_id)
 print(player_dict)
