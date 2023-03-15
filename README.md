@@ -16,5 +16,6 @@ If you want to see my previously queried results you can open up the Hockey DB.d
 My program for personal use is SQLite and DBBrowser(SQLite) because of it's ease of access and gui tools.
 
 GOALS:
+
 Eventually, I'd like to simplify this to just inputting the day and then loop through the schedule.
 Adding functionality to pull stats from the sportsbook PrizePicks.com so that it's easier to compare the lines and make quicker decisions.
