@@ -34,10 +34,10 @@ month = now.strftime("%B")
 schedule_date = "?date=2023-03-14"
 schedule_url = f"https://statsapi.web.nhl.com/api/v1/schedule{schedule_date}"
 # TEAM SHOULD BE LOOK LIKE, "Kings" AND OPPONENT SHOULD LOOK LIKE, "Detroit Wed Rings"
-team = "Flyers"
-opponent = "Vegas Golden Knights"
+team = "Bruins"
+opponent = "Chicago Blackhawks"
 # Defines whether to pull stats for "Home" or "Road"
-h_or_r = "Home" """Road"""
+h_or_r = "Road"
 # Invokes a function that bypasses cloudflare firewalls. Only use if timed out by HockeyReference.com,
 # much slower method
 manual = False
@@ -238,8 +238,8 @@ def get_player_dfs(player_dict):
         if sv_per_game > 0:
             player_stats.update({k: {sv_per_game, opp_sv_per_gp, month_sv_per_gp, h_or_r_value}})
         """Debugging print statement"""
-        for player, stats in player_stats.items():
-            print(player, stats)
+        # for player, stats in player_stats.items():
+        #     print(player, stats)
         time.sleep(5)
 
 
