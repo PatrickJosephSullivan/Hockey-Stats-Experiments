@@ -9,6 +9,7 @@ It provides their shots/saves on goal on average, at home/road, in the current m
 
 Please make sure to enter the team mascot for the team you are querying and the full team name for the opponent that day. 
 EXAMPLE:
+
 Query: "Kings"
 Opponent: "Vegas Golden Knights" 
 
