@@ -75,7 +75,8 @@ schedule_url = f"https://statsapi.web.nhl.com/api/v1/schedule{schedule_date}"
 # team = "Bruins"
 # opponent = "Chicago Blackhawks"
 # Defines whether to pull stats for "Home" or "Road"
-h_or_r = "Road"
+# h_or_r = "Road"
+
 # Invokes a function that bypasses cloudflare firewalls. Only use if timed out by HockeyReference.com,
 # much slower method
 manual = False
@@ -295,8 +296,8 @@ def loop_teams(schedule_date):
     Hopefully will eliminate having to type in
     each team individually"""
     for i in teams_dict.values():
-        # print(i)
-        # print(type(i))
+        global h_or_r
+        h_or_r = "Home"
         i = list(i.items())
         home_team = i[0][1]
         team = nhl_teams_logos.get(home_team)
@@ -317,21 +318,28 @@ def loop_teams(schedule_date):
                 v = str(v)
                 v = v.strip("{}")
                 f.write(f"{k}, {v}\n")
-        # for home_team, road_team in i[0], i[2]:
-        #     print(home_team, road_team)
-        # for i[0] in i.items():
-        #     if k == 'home':
-        #         h_or_r = "Home"
-        #         if home_team in nhl_teams_logos:
-        #             team = nhl_teams_logos.get(v)
-        #             print(team)
-        #         print(h_or_r, team, )
-        #     elif k == 'road':
-        #         h_or_r = "Road"
-        #         if v in nhl_teams_logos:
-        #             team = nhl_teams_logos.get(v)
-        #             print(team)
-        #         print(h_or_r, v)
+    for i in teams_dict.values():
+        h_or_r = "Road"
+        i = list(i.items())
+        home_team = i[0][1]
+        road_team = i[2][1]
+        team = nhl_teams_logos.get(road_team)
+        opponent = home_team
+        team_id = get_team_id(team)
+        player_dict = get_team_roster(team_id)
+        print(player_dict)
+        player_urls = parse_name_parts(player_dict)
+        print(player_urls)
+        get_player_dfs(player_dict)
+    with open(f"player_stats_{today}.csv", "w") as f:
+        f.write(
+            f"Player, Shots or Saves, Shots or Saves Against Opponent, Shots or Saves in {month}, Shots or Saves at "
+            f"{h_or_r}\n")
+        for k, v in player_stats.items():
+            v = str(v)
+            v = v.strip("{}")
+            f.write(f"{k}, {v}\n")
+
 
 
 get_teams(schedule_url)
