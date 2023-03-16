@@ -18,8 +18,45 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 import pandas as pd
 
-# TODO Add loop through teams.
+# TODO Add loop through home teams.
 # TODO Add Functionality for Statistical Significance Calculation Based on Games Played.
+
+# Dictionary used for translation into API formats.
+nhl_teams_logos = {
+    "Anaheim Ducks": "Ducks",
+    "Arizona Coyotes": "Coyotes",
+    "Boston Bruins": "Bruins",
+    "Buffalo Sabres": "Sabres",
+    "Calgary Flames": "Flames",
+    "Carolina Hurricanes": "Hurricanes",
+    "Chicago Blackhawks": "Blackhawks",
+    "Colorado Avalanche": "Avalanche",
+    "Columbus Blue Jackets": "Blue Jackets",
+    "Dallas Stars": "Stars",
+    "Detroit Red Wings": "Red Wings",
+    "Edmonton Oilers": "Oilers",
+    "Florida Panthers": "Panthers",
+    "Los Angeles Kings": "Kings",
+    "Minnesota Wild": "Wild",
+    "Montréal Canadiens": "Canadiens",
+    "Nashville Predators": "Predators",
+    "New Jersey Devils": "Devils",
+    "New York Islanders": "Islanders",
+    "New York Rangers": "Rangers",
+    "Ottawa Senators": "Senators",
+    "Philadelphia Flyers": "Flyers",
+    "Pittsburgh Penguins": "Penguins",
+    "San Jose Sharks": "Sharks",
+    "Seattle Kraken": "Kraken",
+    "St. Louis Blues": "Blues",
+    "Tampa Bay Lightning": "Lightning",
+    "Toronto Maple Leafs": "Maple Leafs",
+    "Vancouver Canucks": "Canucks",
+    "Vegas Golden Knights": "Golden Knights",
+    "Washington Capitals": "Capitals",
+    "Winnipeg Jets": "Jets"
+}
+
 
 # Dataframe print options
 pd.options.display.max_columns = None
@@ -35,8 +72,8 @@ month = now.strftime("%B")
 schedule_date = "?date=2023-03-16"
 schedule_url = f"https://statsapi.web.nhl.com/api/v1/schedule{schedule_date}"
 # TEAM SHOULD BE LOOK LIKE, "Kings" AND OPPONENT SHOULD LOOK LIKE, "Detroit Wed Rings"
-team = "Bruins"
-opponent = "Chicago Blackhawks"
+# team = "Bruins"
+# opponent = "Chicago Blackhawks"
 # Defines whether to pull stats for "Home" or "Road"
 h_or_r = "Road"
 # Invokes a function that bypasses cloudflare firewalls. Only use if timed out by HockeyReference.com,
@@ -248,8 +285,8 @@ def get_player_dfs(player_dict):
         if sv_per_game > 0:
             player_stats.update({k: {sv_per_game, opp_sv_per_gp, month_sv_per_gp, h_or_r_value}})
         """Debugging print statement"""
-        # for player, stats in player_stats.items():
-        #     print(player, stats)
+        for player, stats in player_stats.items():
+            print(player, stats)
         time.sleep(5)
 
 
@@ -257,35 +294,58 @@ def loop_teams(schedule_date):
     """Experimental function for looping through teams.
     Hopefully will eliminate having to type in
     each team individually"""
-    # new_teams_dict = str(teams_dict.values())
-    # new_teams_dict = new_teams_dict.strip("dict_values([])")
-    # new_teams_dict = dict(new_teams_dict)
-    # new_teams_dict = dict(new_teams_dict)
-    # print(new_teams_dict)
     for i in teams_dict.values():
         # print(i)
         # print(type(i))
-        for k, v in i.items():
-            if k == 'home':
-                h_or_r = "Home"
-                print(h_or_r, v)
-            elif k == 'road':
-                h_or_r = "Road"
-                print(h_or_r, v)
+        i = list(i.items())
+        home_team = i[0][1]
+        team = nhl_teams_logos.get(home_team)
+        road_team = i[2][1]
+        global opponent
+        opponent = road_team
+        team_id = get_team_id(team)
+        player_dict = get_team_roster(team_id)
+        print(player_dict)
+        player_urls = parse_name_parts(player_dict)
+        print(player_urls)
+        get_player_dfs(player_dict)
+        with open(f"player_stats_{team}_vs_{opponent}_{today}.csv", "w") as f:
+            f.write(
+                f"Player, Shots or Saves, Shots or Saves Against Opponent, Shots or Saves in {month}, Shots or Saves at "
+                f"{h_or_r}\n")
+            for k, v in player_stats.items():
+                v = str(v)
+                v = v.strip("{}")
+                f.write(f"{k}, {v}\n")
+        # for home_team, road_team in i[0], i[2]:
+        #     print(home_team, road_team)
+        # for i[0] in i.items():
+        #     if k == 'home':
+        #         h_or_r = "Home"
+        #         if home_team in nhl_teams_logos:
+        #             team = nhl_teams_logos.get(v)
+        #             print(team)
+        #         print(h_or_r, team, )
+        #     elif k == 'road':
+        #         h_or_r = "Road"
+        #         if v in nhl_teams_logos:
+        #             team = nhl_teams_logos.get(v)
+        #             print(team)
+        #         print(h_or_r, v)
 
 
 get_teams(schedule_url)
 loop_teams(schedule_date)
-team_id = get_team_id(team)
-player_dict = get_team_roster(team_id)
-print(player_dict)
-player_urls = parse_name_parts(player_dict)
-print(player_urls)
-get_player_dfs(player_dict)
-with open(f"player_stats_{team}_vs_{opponent}_{today}.csv", "w") as f:
-    f.write(f"Player, Shots or Saves, Shots or Saves Against Opponent, Shots or Saves in {month}, Shots or Saves at "
-            f"{h_or_r}\n")
-    for k, v in player_stats.items():
-        v = str(v)
-        v = v.strip("{}")
-        f.write(f"{k}, {v}\n")
+# team_id = get_team_id(team)
+# player_dict = get_team_roster(team_id)
+# print(player_dict)
+# player_urls = parse_name_parts(player_dict)
+# print(player_urls)
+# get_player_dfs(player_dict)
+# with open(f"player_stats_{team}_vs_{opponent}_{today}.csv", "w") as f:
+#     f.write(f"Player, Shots or Saves, Shots or Saves Against Opponent, Shots or Saves in {month}, Shots or Saves at "
+#             f"{h_or_r}\n")
+#     for k, v in player_stats.items():
+#         v = str(v)
+#         v = v.strip("{}")
+#         f.write(f"{k}, {v}\n")
