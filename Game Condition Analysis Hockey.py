@@ -310,14 +310,6 @@ def loop_teams(schedule_date):
         player_urls = parse_name_parts(player_dict)
         print(player_urls)
         get_player_dfs(player_dict)
-        with open(f"player_stats_{team}_vs_{opponent}_{today}.csv", "w") as f:
-            f.write(
-                f"Player, Shots or Saves, Shots or Saves Against Opponent, Shots or Saves in {month}, Shots or Saves at "
-                f"{h_or_r}\n")
-            for k, v in player_stats.items():
-                v = str(v)
-                v = v.strip("{}")
-                f.write(f"{k}, {v}\n")
     for i in teams_dict.values():
         h_or_r = "Road"
         i = list(i.items())
@@ -339,6 +331,7 @@ def loop_teams(schedule_date):
             v = str(v)
             v = v.strip("{}")
             f.write(f"{k}, {v}\n")
+        f.write("\n")
 
 
 
