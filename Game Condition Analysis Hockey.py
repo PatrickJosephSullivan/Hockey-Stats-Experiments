@@ -18,7 +18,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 import pandas as pd
 
-# TODO Add loop through home teams.
+# TODO Fix bug for wrong output
 # TODO Add Functionality for Statistical Significance Calculation Based on Games Played.
 
 # Dictionary used for translation into API formats.
@@ -69,8 +69,11 @@ now = datetime.now()
 today = datetime.now().strftime("%m_%d_%Y")
 month = now.strftime("%B")
 # Defines what schedule date should be pulled from nhl.com
-schedule_date = "?date=2023-03-16"
+schedule_date = "?date=2023-03-18"
 schedule_url = f"https://statsapi.web.nhl.com/api/v1/schedule{schedule_date}"
+
+"""DEPRECATED MANUAL CALLS"""
+"""Used to invoke a stat call on an individual game instead of looping through a day's schedule"""
 # TEAM SHOULD BE LOOK LIKE, "Kings" AND OPPONENT SHOULD LOOK LIKE, "Detroit Wed Rings"
 # team = "Bruins"
 # opponent = "Chicago Blackhawks"
@@ -113,10 +116,14 @@ def get_teams(schedule_url):
 
 # Define a function to retrieve a team's id
 def get_team_id(team_name):
+    """Translates team logo Ex. Kings, Golden Knights
+     into nhl api ID Ex. 28,12,etc."""
     url = "https://statsapi.web.nhl.com/api/v1/teams"
     response = requests.get(url)
     teams = response.json()
+    # Finds team section.
     teams = teams["teams"]
+    # Iterates through logo team names and returns their id
     for i in teams:
         if i["teamName"] == team_name:
             return i["id"]
@@ -124,8 +131,9 @@ def get_team_id(team_name):
             None
 
 
-# Define a function to get team's roster
+
 def get_team_roster(team_id):
+    """Gets a teams roster using the team ID"""
     player_ids = {}
     url = "https://statsapi.web.nhl.com/api/v1/teams/" + str(team_id) + "/?expand=team.roster"
     response = requests.get(url)
@@ -239,7 +247,8 @@ def get_player_dfs(player_dict):
                 opp_gp = int(opp_row['GP'])
                 opp_sv_per_gp = opp_sv / opp_gp
         else:
-            opp_s_per_gp = "NULL"
+            opp_s_per_gp = 0
+            opp_sv_per_gp = 0
         # Runs month calculations
         if not month_row.empty:
             if "S" in df:
@@ -251,7 +260,8 @@ def get_player_dfs(player_dict):
                 gp_per_month = int(month_row['GP'])
                 month_sv_per_gp = sv_per_month / gp_per_month
         else:
-            month_s_per_gp = "NULL"
+            month_s_per_gp = 0
+            month_sv_per_gp = 0
         # Runs home or road data
         if not h_or_r_row.empty:
             if "S" in df and h_or_r == "Home":
@@ -271,7 +281,7 @@ def get_player_dfs(player_dict):
                 gp_per_month = int(h_or_r_row['GP'])
                 road_sv_per_gp = road_sv_per_gp / gp_per_month
         else:
-            h_or_r_value = "NULL"
+            h_or_r_value = 0
         # Find the value that's greater than 0 and get variable ready for print statement
         for i in [home_s_per_gp, road_s_per_gp, home_sv_per_gp, road_sv_per_gp]:
             # print(i)
@@ -279,15 +289,18 @@ def get_player_dfs(player_dict):
                 h_or_r_value = i
                 break
             else:
-                h_or_r_value = "NULL"
+                h_or_r_value = 0
         # if a value is found, put it in the dictionary
         if s_per_game > 0:
-            player_stats.update({k: {s_per_game, opp_s_per_gp, month_s_per_gp, h_or_r_value}})
+            player_stats.update({k: [s_per_game, opp_s_per_gp, month_s_per_gp, h_or_r_value]})
         if sv_per_game > 0:
-            player_stats.update({k: {sv_per_game, opp_sv_per_gp, month_sv_per_gp, h_or_r_value}})
+            player_stats.update({k: [sv_per_game, opp_sv_per_gp, month_sv_per_gp, h_or_r_value]})
         """Debugging print statement"""
-        for player, stats in player_stats.items():
-            print(player, stats)
+        # for player, stats in player_stats.items():
+        #     print(player, stats)
+        last_key = list(player_stats)[-1]
+        last_value = list(player_stats.values())[-1]
+        print(str(last_key)+": "+str(last_value))
         time.sleep(5)
 
 
@@ -323,13 +336,15 @@ def loop_teams(schedule_date):
         player_urls = parse_name_parts(player_dict)
         print(player_urls)
         get_player_dfs(player_dict)
-    with open(f"player_stats_{today}.csv", "w") as f:
+    csv_date = schedule_date[11:]
+    csv_date = csv_date.replace("-", "_")
+    with open(f"player_stats_{csv_date}.csv", "w") as f:
         f.write(
             f"Player, Shots or Saves, Shots or Saves Against Opponent, Shots or Saves in {month}, Shots or Saves at "
-            f"{h_or_r}\n")
+            f"condition\n")
         for k, v in player_stats.items():
             v = str(v)
-            v = v.strip("{}")
+            v = v.strip("[]")
             f.write(f"{k}, {v}\n")
         f.write("\n")
 
