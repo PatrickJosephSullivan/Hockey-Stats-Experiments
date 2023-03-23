@@ -69,7 +69,7 @@ now = datetime.now()
 today = datetime.now().strftime("%m_%d_%Y")
 month = now.strftime("%B")
 # Defines what schedule date should be pulled from nhl.com
-schedule_date = "?date=2023-03-18"
+schedule_date = "?date=2023-03-23"
 schedule_url = f"https://statsapi.web.nhl.com/api/v1/schedule{schedule_date}"
 
 """DEPRECATED MANUAL CALLS"""
@@ -301,7 +301,7 @@ def get_player_dfs(player_dict):
         last_key = list(player_stats)[-1]
         last_value = list(player_stats.values())[-1]
         print(str(last_key)+": "+str(last_value))
-        time.sleep(5)
+        time.sleep(4.5)
 
 
 def loop_teams(schedule_date):
