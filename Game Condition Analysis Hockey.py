@@ -292,7 +292,10 @@ def get_player_dfs(player_dict):
                 h_or_r_value = 0
         # if a value is found, put it in the dictionary
         if s_per_game > 0:
-            player_stats.update({k: [s_per_game, opp_s_per_gp, month_s_per_gp, h_or_r_value]})
+            stat_list = [s_per_game,opp_s_per_gp, month_s_per_gp, h_or_r_value]
+            average = sum(stat_list)/len(stat_list)
+            stat_list.append(average)
+            player_stats.update({k: stat_list})
         if sv_per_game > 0:
             player_stats.update({k: [sv_per_game, opp_sv_per_gp, month_sv_per_gp, h_or_r_value]})
         """Debugging print statement"""
@@ -347,6 +350,7 @@ def loop_teams(schedule_date):
             v = v.strip("[]")
             f.write(f"{k}, {v}\n")
         f.write("\n")
+
 
 
 
