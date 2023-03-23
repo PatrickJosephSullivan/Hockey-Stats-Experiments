@@ -354,16 +354,16 @@ def loop_teams(schedule_date):
             f.write(f"{k}, {v}\n")
         f.write("\n")
 
-# def pp_line(pp_url):
-#     driver = webdriver.Firefox()
-#     driver.get(pp_url)
-#     driver.maximize_window()
-#     res = driver.page_source
-#     print(res)
-#     driver.quit()
-#     soup = BeautifulSoup(res, 'html.parser')
+def pp_line(pp_url):
+    driver = webdriver.Firefox()
+    driver.get(pp_url)
+    driver.maximize_window()
+    res = driver.page_source
+    print(res)
+    driver.quit()
+    soup = BeautifulSoup(res, 'html.parser')
 
-# pp_line("https://app.prizepicks.com/")
+pp_line("https://app.prizepicks.com/")
 get_teams(schedule_url)
 loop_teams(schedule_date)
 # team_id = get_team_id(team)
