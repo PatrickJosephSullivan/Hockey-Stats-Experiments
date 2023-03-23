@@ -297,7 +297,10 @@ def get_player_dfs(player_dict):
             stat_list.append(average)
             player_stats.update({k: stat_list})
         if sv_per_game > 0:
-            player_stats.update({k: [sv_per_game, opp_sv_per_gp, month_sv_per_gp, h_or_r_value]})
+            stat_list = [sv_per_game, opp_sv_per_gp, month_sv_per_gp, h_or_r_value]
+            average = sum(stat_list) / len(stat_list)
+            stat_list.append(average)
+            player_stats.update({k: stat_list})
         """Debugging print statement"""
         # for player, stats in player_stats.items():
         #     print(player, stats)
