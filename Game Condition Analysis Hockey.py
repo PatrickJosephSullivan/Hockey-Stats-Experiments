@@ -358,10 +358,36 @@ def pp_line(pp_url):
     driver = webdriver.Firefox()
     driver.get(pp_url)
     driver.maximize_window()
+    time.sleep(2)
+    close = driver.find_element(By.CLASS_NAME, "close")
+    close.click()
+    time.sleep(2)
+    boards = driver.find_elements(By.CLASS_NAME, "league")
+    for board in boards:
+        name = board.find_element(By.CLASS_NAME, "name")
+        nhl_board = name.find_element(By.XPATH, "//*[text()='NHL']")
+    nhl_board.click()
+    time.sleep(2)
     res = driver.page_source
     print(res)
+    res = str(res)
+    text = res.json()
     driver.quit()
-    soup = BeautifulSoup(res, 'html.parser')
+    projections = soup.find("div", id="projections")
+    projections = projections.find_all("div", {"class": "projection"})
+    for i in projections:
+        player_name = i.contents
+        print(player_name)
+    print(projections)
+    # player_boxes =
+    # print(player_boxes)
+
+    # res = driver.page_source
+    # print(res)
+    #
+    # soup = BeautifulSoup(res, 'html.parser')
+    # driver.quit()
+
 
 pp_line("https://app.prizepicks.com/")
 get_teams(schedule_url)
