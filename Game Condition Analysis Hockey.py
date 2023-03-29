@@ -69,7 +69,7 @@ now = datetime.now()
 today = datetime.now().strftime("%m_%d_%Y")
 month = now.strftime("%B")
 # Defines what schedule date should be pulled from nhl.com
-schedule_date = "?date=2023-03-23"
+schedule_date = "?date=2023-03-30"
 schedule_url = f"https://statsapi.web.nhl.com/api/v1/schedule{schedule_date}"
 
 """DEPRECATED MANUAL CALLS"""
@@ -93,6 +93,7 @@ def get_teams(schedule_url):
     url = schedule_url
     response = requests.get(url)
     text = response.json()
+    print(text)
     all_teams = text["dates"][0]["games"]
     # iterates through all_teams text.
     for i in all_teams:
@@ -186,7 +187,6 @@ def parse_name_parts(player_dict):
 
 
 def get_player_dfs(player_dict):
-    print(player_dict)
     for k, v in player_dict.items():
         # Initiate variables
         s_per_game, sv_per_game, opp_s_per_gp, opp_sv_per_gp, month_s_per_gp, month_sv_per_gp, home_s_per_gp, \
@@ -218,6 +218,7 @@ def get_player_dfs(player_dict):
         # Transform unimportant data
         df.drop(df[df['Value'] == "Value"].index, inplace=True)
         df.iloc[:, 1:] = df.iloc[:, 1:].fillna(0.0)
+        # Declare rows used in analysis
         total_row = df.loc[df['Value'] == 'Total']
         opp_row = df.loc[df['Value'] == opponent]
         month_row = df.loc[df['Value'] == month]
@@ -347,7 +348,7 @@ def loop_teams(schedule_date):
     with open(f"player_stats_{csv_date}.csv", "w") as f:
         f.write(
             f"Player, Shots or Saves, Shots or Saves Against Opponent, Shots or Saves in {month}, Shots or Saves at "
-            f"condition\n")
+            f"condition, Average of Conditions\n")
         for k, v in player_stats.items():
             v = str(v)
             v = v.strip("[]")
